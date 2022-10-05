@@ -251,7 +251,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bee: {fileID: 3984704131760255726, guid: fef516bd67669fa49a2d6d1238b11ae9, type: 3}
-  beeNum: 10
+  beeNum: 15
+  maxSpeed: 10
+  minSpeed: 4
+  rotationSpeed: 2
+  neighbourDistance: 5
+  beeList: []
 --- !u!4 &847744517
 Transform:
   m_ObjectHideFlags: 0
@@ -569,7 +574,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 392177423364264586, guid: 9364a3ef0d4deb84a8f12b8082fe3854, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5700002
+      value: 1.419
       objectReference: {fileID: 0}
     - target: {fileID: 392177423364264586, guid: 9364a3ef0d4deb84a8f12b8082fe3854, type: 3}
       propertyPath: m_LocalPosition.z
