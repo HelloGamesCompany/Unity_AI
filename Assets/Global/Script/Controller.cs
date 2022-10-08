@@ -21,7 +21,7 @@ public class Controller : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-
+        agent.speed = speed;
         //InvokeRepeating("Wander", 1, 5);
     }
 
@@ -29,7 +29,7 @@ public class Controller : MonoBehaviour
     {
         agent.destination = target.transform.position;
 
-        if (Vector3.Distance(transform.position, target.transform.position) < 2.0f)
+        if (Vector3.Distance(transform.position, target.transform.position) < radius)
         {
             //target.GetComponent<MMController>().ChangeState();
 
@@ -49,8 +49,8 @@ public class Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Seek();
-        Wander();
+        Seek();
+        //Wander();
 
         //UnityEngine.Random.insideUnitCircle
         //axisX = Input.GetAxis("Horizontal");
