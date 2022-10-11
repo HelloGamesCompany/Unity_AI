@@ -11,7 +11,7 @@ public class Controller : MonoBehaviour
 
     public float radius = 2.0f, offset = 0.2f;
 
-    public GameObject target;
+    public Target target;
 
     Vector3 targetPos;
 
@@ -22,27 +22,15 @@ public class Controller : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         agent.speed = speed;
-        //InvokeRepeating("Wander", 1, 5);
     }
 
     void Seek()
     {
-        agent.destination = target.transform.position;
+        agent.destination = target.gameObject.transform.position;
 
         if (Vector3.Distance(transform.position, target.transform.position) < radius)
         {
-            //target.GetComponent<MMController>().ChangeState();
-
-            Target t;
-
-            if(target.TryGetComponent<Target>(out t))
-            {
-                target = target.GetComponent<Target>().nextTarget;
-            }
-            else
-            {
-                agent.isStopped = true;
-            }
+            target = target.GetComponent<Target>().GetNextTarget(target);
         }
     }
 
@@ -50,23 +38,10 @@ public class Controller : MonoBehaviour
     void Update()
     {
         Seek();
-        //Wander();
-
-        //UnityEngine.Random.insideUnitCircle
-        //axisX = Input.GetAxis("Horizontal");
-        //axisY = Input.GetAxis("Vertical");
-
-        //transform.transform.position += (new Vector3(axisX, 0, axisY) * speed * Time.deltaTime);
-    }
-
-    public void DetectExTarget(GameObject target)
-    {
-        this.target = target;
     }
 
     void Wander()
     {
-        Debug.Log("a");
         Vector3 localTarget = UnityEngine.Random.insideUnitCircle * radius;
         localTarget += new Vector3(0, 0, offset);
 
