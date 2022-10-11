@@ -20,8 +20,13 @@ public class BeeManager : MonoBehaviour
     public float rotationSpeed = 2.0f;
 
     public float neighbourDistance = 1.0f;
+    public float leaderSpeed = 8.0f;
 
     public List<GameObject> beeList = new List<GameObject>();
+
+    public Vector3 targetDirection;
+    public GameObject beeLeader;
+    public GameObject leaderTarget = null;
 
     // Start is called before the first frame update
     void Start()
@@ -41,14 +46,31 @@ public class BeeManager : MonoBehaviour
             b.transform.SetParent(transform);
 
             b.GetComponent<BeeFlock>().manager = this;
+            if (i <= (int)(beeNum/3)) b.GetComponent<BeeFlock>().followLeader = true;
 
             beeList.Add(b);
         }
+        beeLeader = beeList[0];
+        beeLeader.GetComponentInChildren<SpriteRenderer>().enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (leaderTarget == null) return;
+
+        targetDirection = leaderTarget.transform.position - beeLeader.transform.position;
+        targetDirection.y += 0.5f;
+
+        Debug.Log(targetDirection);
+
+        beeLeader.transform.position += targetDirection.normalized * leaderSpeed * Time.deltaTime;
+        //beeLeader.transform.Translate(targetDirection.normalized * maxSpeed * Time.deltaTime);
+    }
+
+    public void GiveTarget(GameObject target)
+    {
+        leaderTarget = target;
+        if (leaderTarget == null) targetDirection = Vector3.zero;
     }
 }

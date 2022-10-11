@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1143,8 +1143,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1151154910, guid: 5fa1d000ebc587a4faab076089d66ebf, type: 3}
+      propertyPath: cameraLimitX.x
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151154910, guid: 5fa1d000ebc587a4faab076089d66ebf, type: 3}
+      propertyPath: cameraLimitX.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151154910, guid: 5fa1d000ebc587a4faab076089d66ebf, type: 3}
+      propertyPath: cameraLimitZ.x
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151154910, guid: 5fa1d000ebc587a4faab076089d66ebf, type: 3}
+      propertyPath: cameraLimitZ.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151154910, guid: 5fa1d000ebc587a4faab076089d66ebf, type: 3}
       propertyPath: cameraRotateSpeed
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151154910, guid: 5fa1d000ebc587a4faab076089d66ebf, type: 3}
+      propertyPath: cameraMovementSpeed
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7289653404212407271, guid: 5fa1d000ebc587a4faab076089d66ebf, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1764,11 +1784,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bee: {fileID: 3984704131760255726, guid: fef516bd67669fa49a2d6d1238b11ae9, type: 3}
   beeNum: 15
-  maxSpeed: 10
-  minSpeed: 4
-  rotationSpeed: 2
-  neighbourDistance: 5
+  maxSpeed: 2.9
+  minSpeed: 0.7
+  rotationSpeed: 3.1
+  neighbourDistance: 17.43
+  leaderSpeed: 8
   beeList: []
+  targetDirection: {x: 0, y: 0, z: 0}
+  beeLeader: {fileID: 0}
+  leaderTarget: {fileID: 0}
 --- !u!4 &714541359
 Transform:
   m_ObjectHideFlags: 0
@@ -4725,7 +4749,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5729764323851113473, guid: 1c9eb11e445ae69468ca8289a9d53b4c, type: 3}
       propertyPath: speed
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5729764323851113473, guid: 1c9eb11e445ae69468ca8289a9d53b4c, type: 3}
       propertyPath: target

@@ -9,17 +9,24 @@ public class BeeFlock : MonoBehaviour
 
     public float speed = 1.0f;
 
+    private float movementSpeed = 5.0f;
+
+    public bool followLeader = false;
+
     [HideInInspector]
     public Vector3 direction;
 
     // Start is called before the first frame update
     void Start()
     {
+        movementSpeed = manager.leaderSpeed;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (manager.beeLeader == this.gameObject) return;
+           
         Vector3 cohesion = Vector3.zero;
         Vector3 separation = Vector3.zero;
         Vector3 align = Vector3.zero;
@@ -56,12 +63,17 @@ public class BeeFlock : MonoBehaviour
         //Debug.Log("align:" + align);
         //Debug.Log("separation:" + separation);
 
-        direction = (cohesion + align + separation).normalized * speed;
+        Vector3 leaderDir = Vector3.zero;
+
+        if (followLeader) leaderDir = manager.beeLeader.transform.position - this.transform.position;
+
+        direction = (cohesion + align + separation + leaderDir).normalized * speed;
+        //direction += leaderDir.normalized;
 
         transform.rotation = Quaternion.Slerp(transform.rotation,
                                       Quaternion.LookRotation(direction),
                                       manager.rotationSpeed * Time.deltaTime);
 
-        transform.Translate(0.0f, 0.0f, Time.deltaTime * speed);
+        transform.Translate(0.0f, 0.0f, Time.deltaTime * movementSpeed);
     }
 }
