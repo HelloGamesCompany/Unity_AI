@@ -6,50 +6,98 @@ public class CameraController : MonoBehaviour
 {
     public Camera camera;
 
-    [SerializeField] private float cameraRotateSpeed;
-    [SerializeField] private float cameraMovementSpeed;
-    [SerializeField] private float movementArea;
+    [SerializeField] 
+    private float cameraRotateSpeed;
 
+    [SerializeField]
+    [Range(0,360)]
+    private float cameraRotateAngle = 30;
+
+    [SerializeField] 
+    private float cameraMovementSpeed;
+
+    [SerializeField]
+    private Vector2 cameraLimitX;
+
+    [SerializeField]
+    private Vector2 cameraLimitZ;
+
+    private Quaternion beginRot;
+    private Quaternion endRot;
+
+    bool isRotation = false;
+    float rotationTimeCount = 0;
+
+    private void Start()
+    {
+        endRot = beginRot = transform.rotation;
+    }
     // Update is called once per frame
     void Update()
     {
-        camera.transform.LookAt(this.transform.position);
-        if (Input.GetKey(KeyCode.Q))
+        CameraMovement();
+
+        CameraRotation();
+
+    }
+
+    private void CameraRotation()
+    {
+        void QWRot(int rotAxis)
         {
-            this.transform.Rotate(new Vector3( 0, cameraRotateSpeed, 0));
+            if (isRotation) return;
+
+            isRotation = true;
+            rotationTimeCount = 0;
+            beginRot = transform.rotation;
+            endRot = Quaternion.Euler(0, transform.rotation.eulerAngles.y + (cameraRotateAngle * rotAxis), 0);
+
+            //Debug.Log(endRot.eulerAngles);
         }
-        if (Input.GetKey(KeyCode.E))
+
+        if (Input.GetKeyDown(KeyCode.Q)) QWRot(-1);
+        if (Input.GetKeyDown(KeyCode.E)) QWRot(1);
+
+        float interpolation = cameraRotateSpeed * rotationTimeCount;
+
+        if (interpolation > 1)
         {
-            this.transform.Rotate(new Vector3(0, -cameraRotateSpeed, 0));
+            isRotation = false;
+
+            transform.rotation = endRot;
+
         }
+        else
+        {
+            transform.rotation = Quaternion.Lerp(beginRot, endRot, interpolation);
+
+            rotationTimeCount += Time.deltaTime;
+        }
+    }
+
+    private void CameraMovement()
+    {
+        float axisY = Input.GetAxis("Vertical");
+        float axisX = Input.GetAxis("Horizontal");
 
         Vector3 localForward = (transform.position - camera.transform.position);
         localForward.y = 0;
         localForward.Normalize();
-        Vector3 left = Vector3.Cross(localForward, Vector3.up).normalized;
-        Vector3 lastTransform = transform.position;
+        Vector3 left = Vector3.Cross(localForward, Vector3.up).normalized;        
 
-        if (Input.GetKey(KeyCode.W))
-        { 
-            this.transform.position += localForward * cameraMovementSpeed;
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            this.transform.position -= localForward * cameraMovementSpeed;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            this.transform.position -= left * cameraMovementSpeed;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            this.transform.position += left * cameraMovementSpeed;
-        }
+        transform.position += localForward * cameraMovementSpeed * Time.deltaTime * axisY;
 
-        if (transform.position.magnitude > movementArea)
-        {
-            transform.position = lastTransform;
-        }
+        transform.position -= left * cameraMovementSpeed * Time.deltaTime * axisX;
 
+        CameraLimitation();
+    }
+
+    private void CameraLimitation()
+    {
+        float xPos = Mathf.Clamp(transform.position.x, cameraLimitX.x, cameraLimitX.y);
+
+        float zPos = Mathf.Clamp(transform.position.z, cameraLimitZ.x, cameraLimitZ.y);
+
+        transform.position = new Vector3(xPos, transform.position.y, zPos);
     }
 }
