@@ -10,7 +10,7 @@ public class PlayerEyes : MonoBehaviour
     {
         if (other.name == "MMCol")
         {
-            player.GetComponent<Controller>().DetectExTarget(other.gameObject);
+            //player.GetComponent<Controller>().DetectExTarget(other.gameObject);
         }
     }
 }

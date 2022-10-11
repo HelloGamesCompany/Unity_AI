@@ -52,9 +52,9 @@ public class BeeFlock : MonoBehaviour
             speed = Mathf.Clamp(align.magnitude, manager.minSpeed, manager.maxSpeed);
         }
 
-        Debug.Log("cohesion:" + cohesion);
-        Debug.Log("align:" + align);
-        Debug.Log("separation:" + separation);
+        //Debug.Log("cohesion:" + cohesion);
+        //Debug.Log("align:" + align);
+        //Debug.Log("separation:" + separation);
 
         direction = (cohesion + align + separation).normalized * speed;
 
