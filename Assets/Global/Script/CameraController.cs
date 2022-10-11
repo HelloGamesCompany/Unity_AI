@@ -22,6 +22,15 @@ public class CameraController : MonoBehaviour
     [SerializeField]
     private Vector2 cameraLimitZ;
 
+    [SerializeField]
+    private int maxView = 120;
+
+    [SerializeField]
+    private int minView = 10;
+
+    [SerializeField]
+    private float slideSpeed = 20;
+
     private Quaternion beginRot;
     private Quaternion endRot;
 
@@ -32,13 +41,14 @@ public class CameraController : MonoBehaviour
     {
         endRot = beginRot = transform.rotation;
     }
-    // Update is called once per frame
+
     void Update()
     {
         CameraMovement();
 
         CameraRotation();
 
+        CameraScroll();
     }
 
     private void CameraRotation()
@@ -65,7 +75,6 @@ public class CameraController : MonoBehaviour
             isRotation = false;
 
             transform.rotation = endRot;
-
         }
         else
         {
@@ -99,5 +108,14 @@ public class CameraController : MonoBehaviour
         float zPos = Mathf.Clamp(transform.position.z, cameraLimitZ.x, cameraLimitZ.y);
 
         transform.position = new Vector3(xPos, transform.position.y, zPos);
+    }
+
+    private void CameraScroll()
+    {
+        float mouseCenter = Input.GetAxis("Mouse ScrollWheel");
+
+        camera.fieldOfView -= slideSpeed * mouseCenter;
+
+        camera.fieldOfView = Mathf.Clamp(camera.fieldOfView, minView, maxView);
     }
 }

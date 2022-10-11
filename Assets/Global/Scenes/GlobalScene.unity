@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1478,7 +1478,11 @@ MonoBehaviour:
   minSpeed: 4
   rotationSpeed: 2
   neighbourDistance: 5
+  leaderSpeed: 8
   beeList: []
+  targetDirection: {x: 0, y: 0, z: 0}
+  beeLeader: {fileID: 0}
+  leaderTarget: {fileID: 0}
 --- !u!4 &847744517
 Transform:
   m_ObjectHideFlags: 0
@@ -4660,6 +4664,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1151154910, guid: 5fa1d000ebc587a4faab076089d66ebf, type: 3}
+      propertyPath: maxView
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151154910, guid: 5fa1d000ebc587a4faab076089d66ebf, type: 3}
+      propertyPath: minView
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151154910, guid: 5fa1d000ebc587a4faab076089d66ebf, type: 3}
+      propertyPath: slideSpeed
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151154910, guid: 5fa1d000ebc587a4faab076089d66ebf, type: 3}
       propertyPath: cameraLimitX.x
       value: -20
       objectReference: {fileID: 0}
@@ -4687,6 +4703,10 @@ PrefabInstance:
       propertyPath: cameraMovementSpeed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6248355919649994517, guid: 5fa1d000ebc587a4faab076089d66ebf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7289653404212407271, guid: 5fa1d000ebc587a4faab076089d66ebf, type: 3}
       propertyPath: m_LocalPosition.y
       value: 8.38
@@ -4705,7 +4725,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7289653404596559874, guid: 5fa1d000ebc587a4faab076089d66ebf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7289653404596559874, guid: 5fa1d000ebc587a4faab076089d66ebf, type: 3}
       propertyPath: m_LocalPosition.z
