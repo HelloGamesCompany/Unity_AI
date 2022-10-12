@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3613821459730056055}
   - component: {fileID: 6542151402089077480}
-  - component: {fileID: 1745798685}
   - component: {fileID: 2878938149056013659}
   - component: {fileID: 6261454047674855734}
   - component: {fileID: 8922772692165609654}
@@ -71,8 +70,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e52565222ad7edc4287e70f9ddf78d5b, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   speed: 1
   radius: 2
   offset: 0.2
@@ -87,8 +86,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1df82cb3daa1f724fa2431ba19431e3b, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   followedByBees: 0
 --- !u!65 &8922772692165609654
 BoxCollider:
@@ -162,8 +161,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: faaa5ee2935a23246a885bd937f4b698, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   locator: {fileID: 6978302716649853860}
 --- !u!212 &3613821459853445895
 SpriteRenderer:
@@ -314,8 +313,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1d8ab4797068fc4b8be07d1e4ee1ef4, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentAgent: {fileID: 6542151402089077480}
 --- !u!95 &390225692192583061
 Animator:
   serializedVersion: 4
@@ -332,7 +332,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage:
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0

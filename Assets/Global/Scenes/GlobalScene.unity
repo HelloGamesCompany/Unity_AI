@@ -4775,7 +4775,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3280312398580409488, guid: 894c240c526dab8439628adf2dc13bc0, type: 3}
       propertyPath: runSpeed
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6304653327747215072, guid: 894c240c526dab8439628adf2dc13bc0, type: 3}
       propertyPath: m_Name
@@ -4824,6 +4824,10 @@ PrefabInstance:
     - target: {fileID: 6304653327747215075, guid: 894c240c526dab8439628adf2dc13bc0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6304653328272821582, guid: 894c240c526dab8439628adf2dc13bc0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6304653328272821583, guid: 894c240c526dab8439628adf2dc13bc0, type: 3}
       propertyPath: parentAgent
