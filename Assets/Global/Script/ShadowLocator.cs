@@ -27,7 +27,7 @@ public class ShadowLocator : MonoBehaviour
             return;
         }
 
-        transform.position = new Vector3(locator.position.x, 1.0f, locator.position.z);
+        transform.position = new Vector3(locator.position.x, 1.1f, locator.position.z);
 
         float temp = locator.position.y / locatorDefaultHeight;
 

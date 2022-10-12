@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3613821459730056055}
   - component: {fileID: 6542151402089077480}
-  - component: {fileID: 5729764323851113473}
+  - component: {fileID: 1745798685}
   m_Layer: 0
   m_Name: Runner
   m_TagString: Untagged
@@ -57,7 +57,7 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &5729764323851113473
+--- !u!114 &1745798685
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
