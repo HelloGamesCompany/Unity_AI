@@ -14,7 +14,7 @@ NavMeshProjectSettings:
   - name: Road
     cost: 1
   - name: Grass
-    cost: 99
+    cost: 5
   - name: 
     cost: 1
   - name: 
