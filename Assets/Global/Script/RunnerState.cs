@@ -20,4 +20,6 @@ public class RunnerState : MonoBehaviour
         behaviour.target = targetManager.GetNearestKeeper(transform.position);
         Debug.Log("Runner runs in panick!");
     }
+
+
 }

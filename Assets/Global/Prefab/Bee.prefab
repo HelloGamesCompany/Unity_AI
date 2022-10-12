@@ -48,6 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
   speed: 1
+  followLeader: 0
   direction: {x: 0, y: 0, z: 0}
 --- !u!1 &3984704131888757407
 GameObject:
@@ -174,7 +175,7 @@ Transform:
   m_GameObject: {fileID: 3984704132680061250}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7331215236935180862}
@@ -245,6 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1d8ab4797068fc4b8be07d1e4ee1ef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentAgent: {fileID: 0}
 --- !u!1 &8104667559260731803
 GameObject:
   m_ObjectHideFlags: 0
