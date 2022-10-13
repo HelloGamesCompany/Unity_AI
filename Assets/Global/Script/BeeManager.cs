@@ -19,6 +19,8 @@ public class BeeManager : MonoBehaviour
     [Range(0, 20)]
     public float rotationSpeed = 2.0f;
 
+    public float radiusFromLeader = 10.0f;
+
     public float neighbourDistance = 1.0f;
     public float leaderSpeed = 8.0f;
 

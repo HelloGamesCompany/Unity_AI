@@ -63,16 +63,21 @@ public class BeeFlock : MonoBehaviour
         //Debug.Log("align:" + align);
         //Debug.Log("separation:" + separation);
 
-        Vector3 leaderDir = Vector3.zero;
+        Vector3 leaderDir = manager.beeLeader.transform.position - this.transform.position;
 
-        if (followLeader) leaderDir = manager.beeLeader.transform.position - this.transform.position;
+        if (Vector3.Distance(manager.beeLeader.transform.position, this.transform.position) > manager.radiusFromLeader)
+        {
+            direction = leaderDir.normalized * speed;
 
-        direction = (cohesion + align + separation + leaderDir).normalized * speed;
-        //direction += leaderDir.normalized;
-
-        transform.rotation = Quaternion.Slerp(transform.rotation,
-                                      Quaternion.LookRotation(direction),
-                                      manager.rotationSpeed * Time.deltaTime);
+            transform.rotation = Quaternion.LookRotation(direction);
+        }
+        else
+        {
+            direction = (cohesion + align + separation + leaderDir).normalized * speed;
+            transform.rotation = Quaternion.Slerp(transform.rotation,
+                                     Quaternion.LookRotation(leaderDir),
+                                     manager.rotationSpeed * Time.deltaTime);
+        }
 
         transform.Translate(0.0f, 0.0f, Time.deltaTime * movementSpeed);
     }
