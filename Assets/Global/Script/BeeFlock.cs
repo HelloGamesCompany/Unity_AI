@@ -75,7 +75,7 @@ public class BeeFlock : MonoBehaviour
         {
             direction = (cohesion + align + separation + leaderDir).normalized * speed;
             transform.rotation = Quaternion.Slerp(transform.rotation,
-                                     Quaternion.LookRotation(leaderDir),
+                                     Quaternion.LookRotation(direction),
                                      manager.rotationSpeed * Time.deltaTime);
         }
 
