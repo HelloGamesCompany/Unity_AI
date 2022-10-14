@@ -15,7 +15,7 @@ public class Target : MonoBehaviour
 
         if (next == comingFrom) next = nextTargets[randNum == nextTargets.Length-1 ? 0 : ++randNum];
 
-        Debug.Log(next);
+        //Debug.Log(next);
 
         return next;
     }

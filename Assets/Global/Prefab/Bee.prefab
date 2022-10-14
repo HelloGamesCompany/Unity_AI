@@ -10,9 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 3984704131760255725}
   - component: {fileID: 8694481462777448978}
+  - component: {fileID: 3231915291630783961}
+  - component: {fileID: 5647626129893144841}
   m_Layer: 0
   m_Name: Bee
-  m_TagString: Untagged
+  m_TagString: Bee
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50,6 +52,31 @@ MonoBehaviour:
   speed: 1
   followLeader: 0
   direction: {x: 0, y: 0, z: 0}
+--- !u!135 &3231915291630783961
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3984704131760255726}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.15
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5647626129893144841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3984704131760255726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8fcbadb6b7a7dc41a1ac4125fb8b25a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3984704131888757407
 GameObject:
   m_ObjectHideFlags: 0

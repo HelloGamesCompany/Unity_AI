@@ -5,9 +5,16 @@ using UnityEngine;
 public class TreeSpawnerManager : MonoBehaviour
 {
     public GameObject[] trees;
+
     public BeeManager[] beeManagers;
 
     public int beeNum;
+
+    private void Start()
+    {
+        GameObject beeManager = gameObject.transform.Find("Bees").gameObject;
+        beeManagers = beeManager.GetComponentsInChildren<BeeManager>(true);
+    }
 
     public bool CanSpawnBees()
     {
