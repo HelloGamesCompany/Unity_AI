@@ -77,6 +77,20 @@ public class BeeManager : MonoBehaviour
         //beeLeader.transform.Translate(targetDirection.normalized * maxSpeed * Time.deltaTime);
     }
 
+    private void OnEnable()
+    {
+        foreach (var b in beeList)
+        {
+            b.gameObject.SetActive(true);
+            Vector3 pos =
+               transform.position +
+               new Vector3(Random.Range(0.0f, 5.0f),
+               Random.Range(0.0f, 5.0f),
+               Random.Range(0.0f, 5.0f));
+            b.transform.position = pos;
+        }
+    }
+
     public void GiveTarget(GameObject target)
     {
         leaderTarget = target;
