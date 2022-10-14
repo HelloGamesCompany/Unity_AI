@@ -9,6 +9,7 @@ public class RunnerBehaviour : MonoBehaviour
 
     public float radius = 2.0f;
 
+    [HideInInspector]
     public Target target;
 
     [HideInInspector]
@@ -20,6 +21,10 @@ public class RunnerBehaviour : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
 
         agent.speed = speed;
+
+        TargetManager targetManager = FindObjectOfType<TargetManager>();
+
+        target = targetManager.GetNearestRoad(transform.position);
 
         InvokeRepeating("Seek", 0, 0.5f);
     }

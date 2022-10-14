@@ -8,14 +8,15 @@ public class TargetManager : MonoBehaviour
     public Target[] roadTargets;
     private Target[] beeKeepers;
 
-    private void Start()
+    private void Awake()
     {
-        GameObject bkManager =  gameObject.transform.Find("BeeKeepers").gameObject;
+        GameObject bkManager = gameObject.transform.Find("BeeKeepers").gameObject;
         beeKeepers = bkManager.GetComponentsInChildren<Target>();
 
         GameObject rdManager = gameObject.transform.Find("RoadTargets").gameObject;
         roadTargets = rdManager.GetComponentsInChildren<Target>();
     }
+
     public Target GetNearestKeeper(Vector3 myPos)
     {
         Target closestKeeper = null;

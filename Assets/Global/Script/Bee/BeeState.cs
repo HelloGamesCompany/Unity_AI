@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class BeeState : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject dieParticle = null;
+
     private BeeManager beeManager = null;
 
     private void Start()
@@ -17,6 +20,10 @@ public class BeeState : MonoBehaviour
         {
             gameObject.SetActive(false);
             beeManager.BeeDestroyed();
+
+            GameObject p = Instantiate(dieParticle);
+            p.transform.position = transform.position;
+            Destroy(p, 3.0f);
         }
     }
 }

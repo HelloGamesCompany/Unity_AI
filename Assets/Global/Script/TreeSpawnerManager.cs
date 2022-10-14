@@ -10,7 +10,7 @@ public class TreeSpawnerManager : MonoBehaviour
 
     public int beeNum;
 
-    private void Start()
+    private void Awake()
     {
         GameObject beeManager = gameObject.transform.Find("Bees").gameObject;
         beeManagers = beeManager.GetComponentsInChildren<BeeManager>(true);
