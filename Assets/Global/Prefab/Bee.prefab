@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
   speed: 1
-  followLeader: 0
+  movementSpeed: 5
   direction: {x: 0, y: 0, z: 0}
 --- !u!135 &3231915291630783961
 SphereCollider:

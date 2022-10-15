@@ -5,7 +5,7 @@ using UnityEngine;
 public class BeeManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject bee;
+    private GameObject beePrefab;
 
     [SerializeField]
     private int beeNum = 1;
@@ -19,90 +19,120 @@ public class BeeManager : MonoBehaviour
     public float minSpeed = 0;
 
     [Range(0, 20)]
-    public float rotationSpeed = 2.0f;
+    public float maxRotationSpeed = 2.0f;
 
-    public float radiusFromLeader = 10.0f;
+    [Range(0, 20)]
+    public float minRotationSpeed = 2.0f;
 
     public float neighbourDistance = 1.0f;
 
-    public float leaderSpeed = 8.0f;
-
+    [HideInInspector]
     public List<GameObject> beeList = new List<GameObject>();
 
-    public Vector3 targetDirection;
+    private List<BeeFlock> beeFlocks = new List<BeeFlock>();
 
+    [HideInInspector]
     public GameObject beeLeader = null;
 
-    public GameObject leaderTarget = null;
+    public float calDirFreq = 0.2f;
+
+    public float beeRespawnFreq = 10.0f;
 
     // Start is called before the first frame update
     void Start()
     {
         for (int i = 0; i < beeNum; i++)
         {
-            Vector3 pos = 
-                transform.position + 
-                new Vector3(Random.Range(0.0f, 5.0f), 
-                Random.Range(0.0f, 5.0f), 
-                Random.Range(0.0f, 5.0f));
+            Vector3 pos = transform.position + new Vector3
+            (
+                Random.Range(0.0f, 1.0f),
+                Random.Range(0.0f, 1.0f),
+                Random.Range(0.0f, 1.0f)
+            );
 
-            GameObject b = Instantiate(bee);
+            // Setup beeList
+            beeList.Add(Instantiate(beePrefab));
 
-            b.transform.position = pos;
+            beeList[i].transform.position = pos;
 
-            b.transform.SetParent(transform);
+            beeList[i].transform.SetParent(transform);
 
-            b.GetComponent<BeeFlock>().manager = this;
-            if (i <= (int)(beeNum/3)) b.GetComponent<BeeFlock>().followLeader = true;
+            // Setup beeFlock
+            beeFlocks.Add(beeList[i].GetComponent<BeeFlock>());
 
-            beeList.Add(b);
+            beeFlocks[i].manager = this;
+
+            beeFlocks[i].movementSpeed = minSpeed;
+
+            beeFlocks[i].rotationSpeed = Random.Range(minRotationSpeed, maxRotationSpeed);
         }
-        beeLeader = beeList[0];
-        beeLeader.GetComponentInChildren<SpriteRenderer>().enabled = false;
-
         currentBee = beeNum;
+
+        Invoke("CalculBeesDirection", calDirFreq);
+
+        InvokeRepeating("RespawnBee", 0, 10);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void RespawnBee()
     {
-        if (leaderTarget == null) return;
+        if (!gameObject.activeSelf) gameObject.SetActive(true);
+    }
 
-        targetDirection = leaderTarget.transform.position - beeLeader.transform.position;
-        targetDirection.y += 0.5f;
-
-        //Debug.Log(targetDirection);
-
-        beeLeader.transform.position += targetDirection.normalized * leaderSpeed * Time.deltaTime;
-        //beeLeader.transform.Translate(targetDirection.normalized * maxSpeed * Time.deltaTime);
+    private void CalculBeesDirection()
+    {
+        if (gameObject.activeSelf)
+        {
+            foreach (var bf in beeFlocks)
+            {
+                bf.CalculateDir();
+            }
+        }
+        Invoke("CalculBeesDirection", calDirFreq);
     }
 
     private void OnEnable()
     {
-        foreach (var b in beeList)
+        for (int i = 0; i < beeFlocks.Count; i++)
         {
-            b.gameObject.SetActive(true);
-            Vector3 pos =
-               transform.position +
-               new Vector3(Random.Range(0.0f, 5.0f),
-               Random.Range(0.0f, 5.0f),
-               Random.Range(0.0f, 5.0f));
-            b.transform.position = pos;
+            // Reset flocking parametre
+            beeFlocks[i].movementSpeed = minSpeed;
+
+            beeFlocks[i].rotationSpeed = Random.Range(minRotationSpeed, maxRotationSpeed);
+
+            // Reset general parametre
+            Vector3 pos = transform.position + new Vector3
+                (
+                    Random.Range(0.0f, 1.0f),
+                    Random.Range(0.0f, 1.0f),
+                    Random.Range(0.0f, 1.0f)
+                );
+
+            beeList[i].gameObject.SetActive(true);
+
+            beeList[i].transform.position = pos;       
         }
     }
 
-    public void GiveTarget(GameObject target)
+    public void SetTarget(GameObject target)
     {
-        leaderTarget = target;
-        if (leaderTarget == null) targetDirection = Vector3.zero;
+        beeLeader = target;
+
+        for (int i = 0; i < beeFlocks.Count; i++)
+        {
+            // Reset flocking parametre
+            beeFlocks[i].movementSpeed = maxSpeed;
+
+            beeFlocks[i].rotationSpeed = Random.Range(minRotationSpeed, maxRotationSpeed);
+        }
     }
 
     public void BeeDestroyed()
     {
         if (--currentBee <= 0)
         {
-            leaderTarget.GetComponent<RunnerState>().LeavePanicRun();
+            beeLeader.GetComponent<RunnerState>().LeavePanicRun();
             currentBee = beeNum;
+            beeLeader = null;
             gameObject.SetActive(false);
         }
     }

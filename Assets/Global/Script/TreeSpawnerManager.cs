@@ -4,43 +4,19 @@ using UnityEngine;
 
 public class TreeSpawnerManager : MonoBehaviour
 {
-    public GameObject[] trees;
-
-    public BeeManager[] beeManagers;
-
-    public int beeNum;
+    private BeeManager[] beeManagers;
 
     private void Awake()
     {
         GameObject beeManager = gameObject.transform.Find("Bees").gameObject;
-        beeManagers = beeManager.GetComponentsInChildren<BeeManager>(true);
-    }
+        beeManagers = beeManager.GetComponentsInChildren<BeeManager>();
 
-    public bool CanSpawnBees()
-    {
-        uint activeBees = 0;
-        foreach (BeeManager bee in beeManagers)
+        GameObject trees = gameObject.transform.Find("Trees").gameObject;
+        TreeSpawner[] treeSpawners = trees.GetComponentsInChildren<TreeSpawner>();
+        for (int i = 0; i < treeSpawners.Length; i++)
         {
-            if (bee.gameObject.activeSelf)
-            {
-                activeBees++;
-            }
-        }
-        return activeBees < beeNum;
-    }
-
-    public void SpawnBee(Vector3 spawnPos, GameObject target)
-    {
-        foreach(BeeManager bee in beeManagers)
-        {
-            if (!bee.gameObject.activeSelf)
-            {
-                bee.gameObject.SetActive(true); // Activate bee
-                bee.gameObject.transform.position = spawnPos; // Set to current position
-                bee.leaderTarget = target;
-                target.GetComponent<RunnerState>().PanickRun(); // Activate runner panick
-                break;
-            }
+            treeSpawners[i].beeManager = beeManagers[i];
+            beeManagers[i].transform.position = treeSpawners[i].transform.position;
         }
     }
 }

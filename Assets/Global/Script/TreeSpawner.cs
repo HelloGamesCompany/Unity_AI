@@ -4,12 +4,8 @@ using UnityEngine;
 
 public class TreeSpawner : MonoBehaviour
 {
-    private TreeSpawnerManager treeManager;
-
-    private void Start()
-    {
-        treeManager = FindObjectOfType<TreeSpawnerManager>();
-    }
+    [HideInInspector]
+    public BeeManager beeManager;
 
     private void OnTriggerEnter(Collider collision)
     {
@@ -18,10 +14,8 @@ public class TreeSpawner : MonoBehaviour
         {
             if (collision.gameObject.GetComponent<RunnerState>().followedByBees) return;
 
-            if(treeManager.CanSpawnBees())
-            {
-                treeManager.SpawnBee(transform.position, collision.gameObject);
-            }
+            beeManager.SetTarget(collision.gameObject);
+            collision.GetComponent<RunnerState>().PanickRun();
         }
     }
 }
