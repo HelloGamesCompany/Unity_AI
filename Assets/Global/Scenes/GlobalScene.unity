@@ -1298,7 +1298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4708294278795241779, guid: a8c06826c7962e540b007a585c49ba56, type: 3}
       propertyPath: beeRespawnFreq
-      value: 30
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4708294278795241779, guid: a8c06826c7962e540b007a585c49ba56, type: 3}
       propertyPath: maxRotationSpeed
@@ -3619,7 +3619,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4708294278795241779, guid: a8c06826c7962e540b007a585c49ba56, type: 3}
       propertyPath: beeRespawnFreq
-      value: 30
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4708294278795241779, guid: a8c06826c7962e540b007a585c49ba56, type: 3}
       propertyPath: maxRotationSpeed
@@ -6086,7 +6086,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4708294278795241779, guid: a8c06826c7962e540b007a585c49ba56, type: 3}
       propertyPath: beeRespawnFreq
-      value: 30
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4708294278795241779, guid: a8c06826c7962e540b007a585c49ba56, type: 3}
       propertyPath: maxRotationSpeed
@@ -6620,7 +6620,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4708294278795241779, guid: a8c06826c7962e540b007a585c49ba56, type: 3}
       propertyPath: beeRespawnFreq
-      value: 30
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4708294278795241779, guid: a8c06826c7962e540b007a585c49ba56, type: 3}
       propertyPath: maxRotationSpeed
