@@ -70,7 +70,7 @@ public class BeeManager : MonoBehaviour
 
         Invoke("CalculBeesDirection", calDirFreq);
 
-        InvokeRepeating("RespawnBee", 0, 10);
+        InvokeRepeating("RespawnBee", 0, beeRespawnFreq);
     }
 
     private void RespawnBee()
@@ -92,6 +92,8 @@ public class BeeManager : MonoBehaviour
 
     private void OnEnable()
     {
+        currentBee = beeNum;
+
         for (int i = 0; i < beeFlocks.Count; i++)
         {
             // Reset flocking parametre
@@ -131,7 +133,6 @@ public class BeeManager : MonoBehaviour
         if (--currentBee <= 0)
         {
             beeLeader.GetComponent<RunnerState>().LeavePanicRun();
-            currentBee = beeNum;
             beeLeader = null;
             gameObject.SetActive(false);
         }

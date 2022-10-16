@@ -72,10 +72,10 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1886544287204222970}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4
+  m_Radius: 1.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4384858115510477651
 MonoBehaviour:
@@ -161,11 +161,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1c4b74b9ad181949b0f25cc72cf2408, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 1
+  randomMoveRadius: 1
   runSpeed: 1
+  followBeeSpeed: 1
   agent: {fileID: 0}
   targetBee: {fileID: 0}
-  test: {x: 0, y: 0, z: 0}
 --- !u!54 &7911063879667548197
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 6304653327883839122}
   - component: {fileID: 6304653327883839123}
   m_Layer: 0
-  m_Name: RunnerShadow
+  m_Name: BeeKeeperShadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -307,7 +307,7 @@ GameObject:
   - component: {fileID: 6304653328272821583}
   - component: {fileID: 6931641842456920065}
   m_Layer: 0
-  m_Name: RunnerSprite
+  m_Name: BeeKeeperSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

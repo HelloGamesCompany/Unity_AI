@@ -18,12 +18,13 @@ public class BeeState : MonoBehaviour
     {
         if (other.CompareTag("BeeKeeper"))
         {
-            gameObject.SetActive(false);
             beeManager.BeeDestroyed();
 
             GameObject p = Instantiate(dieParticle);
             p.transform.position = transform.position;
             Destroy(p, 3.0f);
+
+            gameObject.SetActive(false);            
         }
     }
 }

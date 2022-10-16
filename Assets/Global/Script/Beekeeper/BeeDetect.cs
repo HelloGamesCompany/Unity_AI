@@ -5,12 +5,10 @@ using UnityEngine;
 public class BeeDetect : MonoBehaviour
 {
     BeekeeperController beekeeper = null;
-
     private void Start()
     {
         beekeeper = GetComponentInParent<BeekeeperController>();
     }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Bee") && !beekeeper.targetBee)
