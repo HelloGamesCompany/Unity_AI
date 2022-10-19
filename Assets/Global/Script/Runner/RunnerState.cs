@@ -23,7 +23,7 @@ public class RunnerState : MonoBehaviour
 
         behaviour.agent.speed = behaviour.speed * 2.5f; 
 
-        Debug.Log("Runner runs in panick!");
+        //Debug.Log("Runner runs in panick!");
     }
     public void LeavePanicRun()
     {
@@ -33,6 +33,6 @@ public class RunnerState : MonoBehaviour
 
         behaviour.agent.speed = behaviour.speed;
 
-        Debug.Log("Runner runs out panick!");
+        //Debug.Log("Runner runs out panick!");
     }
 }

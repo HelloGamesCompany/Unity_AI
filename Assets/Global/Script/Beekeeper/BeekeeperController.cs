@@ -6,13 +6,6 @@ using UnityEngine.AI;
 public class BeekeeperController : MonoBehaviour
 {
     [SerializeField]
-    float randomMoveRadius = 1.0f;
-
-    [SerializeField]
-    [Range(1,20)]
-    float runSpeed = 1.0f;
-
-    [SerializeField]
     [Range(1, 20)]
     float followBeeSpeed = 1.0f;
 
@@ -22,17 +15,19 @@ public class BeekeeperController : MonoBehaviour
     [HideInInspector]
     public GameObject targetBee = null;
 
-    private Vector3 nextTarget;
+    private Wander wander;
 
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
 
-        InvokeRepeating("FindTarget", 0, 0.2f);
+        wander = GetComponent<Wander>();
+
+        InvokeRepeating(nameof(FindTarget), 0, 0.2f);
     }
 
-    void FindTarget()
+    private void FindTarget()
     {
         if (targetBee)
         {
@@ -42,12 +37,6 @@ public class BeekeeperController : MonoBehaviour
             return;
         }
 
-        agent.speed = runSpeed;
-
-        nextTarget = Random.insideUnitCircle * randomMoveRadius;
-
-        nextTarget = new Vector3(nextTarget.x, transform.position.y, nextTarget.y);
-
-        agent.destination = nextTarget;
+        if(wander) wander.Go();
     }
 }

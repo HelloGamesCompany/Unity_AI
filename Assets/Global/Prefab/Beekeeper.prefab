@@ -100,6 +100,8 @@ GameObject:
   - component: {fileID: 6304653327747215075}
   - component: {fileID: 4580754269567219580}
   - component: {fileID: 3280312398580409488}
+  - component: {fileID: 393599431718670988}
+  - component: {fileID: 625161399124350045}
   - component: {fileID: 7911063879667548197}
   - component: {fileID: 1204333279275921982}
   m_Layer: 0
@@ -161,11 +163,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1c4b74b9ad181949b0f25cc72cf2408, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  randomMoveRadius: 1
-  runSpeed: 1
-  followBeeSpeed: 1
+  followBeeSpeed: 8
   agent: {fileID: 0}
   targetBee: {fileID: 0}
+--- !u!114 &393599431718670988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6304653327747215072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cc9f7d1c53fb6443bcb05001888a619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wanderSpeed: 4
+  moveRadius: 50
+--- !u!114 &625161399124350045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6304653327747215072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a62b3318cc8bcc49ba7ee7afe0a5d56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextTargets: []
 --- !u!54 &7911063879667548197
 Rigidbody:
   m_ObjectHideFlags: 0
