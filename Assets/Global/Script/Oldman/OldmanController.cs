@@ -4,22 +4,29 @@ using UnityEngine;
 
 public class OldmanController : MonoBehaviour
 {
-    private Wander wander;
+    //private Wander wander;
+
+    private Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
-        wander = GetComponent<Wander>();
+        anim = GetComponent<Animator>();
 
-        InvokeRepeating(nameof(FindTarget), 0, 0.2f);
+        if (anim) anim.SetBool("Wander", true);
+
+        //wander = GetComponent<Wander>();
+
+        //InvokeRepeating(nameof(FindTarget), 0, 0.2f);
     }
-    private void FindTarget()
-    {
-        if (wander) wander.Go();
-    }
+    //private void FindTarget()
+    //{
+    //    if (wander) wander.Go();
+    //}
 
     public void OnSee(GameObject g)
     {
         Debug.Log("See" + g.name);
+        if (anim) anim.SetBool("Wander", false);
     }
 }
