@@ -44,11 +44,11 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
+        CameraScroll();
+
         CameraMovement();
 
         CameraRotation();
-
-        CameraScroll();
     }
 
     private void CameraRotation()
@@ -114,8 +114,21 @@ public class CameraController : MonoBehaviour
     {
         float mouseCenter = Input.GetAxis("Mouse ScrollWheel");
 
-        camera.fieldOfView -= slideSpeed * mouseCenter;
+        if (mouseCenter == 0) 
+        {
+            return;
+        }
 
-        camera.fieldOfView = Mathf.Clamp(camera.fieldOfView, minView, maxView);
+        Vector3 newPos = camera.transform.localPosition;
+
+        newPos.z -= slideSpeed * mouseCenter;
+
+        newPos.z = Mathf.Clamp(newPos.z, minView, maxView);
+
+        camera.transform.localPosition = newPos;
+
+        //camera.fieldOfView -= slideSpeed * mouseCenter;
+
+        //camera.fieldOfView = Mathf.Clamp(camera.fieldOfView, minView, maxView);
     }
 }
