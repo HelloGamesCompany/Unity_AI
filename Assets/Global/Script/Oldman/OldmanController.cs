@@ -9,17 +9,25 @@ public class OldmanController : MonoBehaviour
     [HideInInspector]
     public Vector3 benchPos = new Vector3(0, 0, 0);
 
+    [SerializeField]
+    private float minimWanderTime = 5.0f;
+
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
     }
 
+    private void Update()
+    {
+        minimWanderTime -= Time.deltaTime;
+    }
+
     public void OnSee(GameObject g)
     {
-        if (g is null)
+        if (minimWanderTime > 0)
         {
-            throw new ArgumentNullException(nameof(g));
+            return;
         }
 
         benchPos = g.transform.position;
@@ -28,5 +36,29 @@ public class OldmanController : MonoBehaviour
         {
             anim.SetTrigger("GoToBench");
         }
+    }
+
+    public void Help()
+    {
+        if (anim && anim.GetCurrentAnimatorStateInfo(0).IsName("SitState"))
+        {
+            anim.SetTrigger("Help");
+        }
+    }
+
+    public void Wander()
+    {
+        if (anim && 
+            (anim.GetCurrentAnimatorStateInfo(0).IsName("SitState") ||
+            anim.GetCurrentAnimatorStateInfo(0).IsName("CryForHelpState"))
+            )
+        {
+            anim.SetTrigger("Wander");
+        }
+    }
+
+    public void ResetWanderTime()
+    {
+        minimWanderTime = 5.0f;
     }
 }

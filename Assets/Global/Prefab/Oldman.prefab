@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 8667574930738194261}
   - component: {fileID: 366501523816004619}
   - component: {fileID: 1317562774}
-  - component: {fileID: 1317562775}
+  - component: {fileID: 6764670214866143804}
   m_Layer: 0
   m_Name: Oldman
   m_TagString: Untagged
@@ -309,6 +309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 485bf145d5652ae44a7f3e31f8665312, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  benchPos: {x: 0, y: 0, z: 0}
 --- !u!120 &8667574930738194261
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -421,6 +422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visionLength: 1.5
+  useCameraLength: 1
 --- !u!95 &1317562774
 Animator:
   serializedVersion: 4
@@ -441,18 +443,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1317562775
-MonoBehaviour:
+--- !u!135 &6764670214866143804
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5901516036369999819}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba6278f557da1a74e801edd86a2d1397, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5901516037172364391
 GameObject:
   m_ObjectHideFlags: 0

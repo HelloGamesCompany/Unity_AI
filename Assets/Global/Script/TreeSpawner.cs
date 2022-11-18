@@ -5,7 +5,7 @@ using UnityEngine;
 public class TreeSpawner : MonoBehaviour
 {
     [HideInInspector]
-    public BeeManager beeManager;
+    public BeeManager beeManager = null;
 
     private void OnTriggerStay(Collider collision)
     {
@@ -13,7 +13,7 @@ public class TreeSpawner : MonoBehaviour
         if (collision.gameObject.CompareTag("Runner"))
         {
             if (collision.gameObject.GetComponent<RunnerState>().followedByBees) return;
-            if (!beeManager.gameObject.activeSelf || beeManager.beeLeader != null) return;
+            if (!beeManager || !beeManager.gameObject.activeSelf || beeManager.beeLeader) return;
 
             beeManager.SetTarget(collision.gameObject);
             collision.GetComponent<RunnerState>().PanickRun();

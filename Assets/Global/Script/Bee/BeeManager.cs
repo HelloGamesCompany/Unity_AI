@@ -132,8 +132,11 @@ public class BeeManager : MonoBehaviour
     {
         if (--currentBee <= 0)
         {
-            beeLeader.GetComponent<RunnerState>().LeavePanicRun();
-            beeLeader = null;
+            if (beeLeader)
+            {
+                beeLeader.GetComponent<RunnerState>().LeavePanicRun();
+                beeLeader = null;
+            }
             gameObject.SetActive(false);
         }
     }

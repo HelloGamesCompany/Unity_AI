@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class WanderState : StateMachineBehaviour
 {
@@ -12,6 +13,16 @@ public class WanderState : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (animator.TryGetComponent(out NavMeshAgent agent))
+        {
+            agent.isStopped = false;
+        }
+
+        if (animator.TryGetComponent(out OldmanController controller))
+        {
+            controller.ResetWanderTime();
+        }
+
         wanderScript = animator.GetComponent<Wander>();
 
         counter = updateFreq;

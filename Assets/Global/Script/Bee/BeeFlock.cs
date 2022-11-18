@@ -14,15 +14,18 @@ public class BeeFlock : MonoBehaviour
     public float rotationSpeed = 5.0f;
 
     [HideInInspector]
-    public Vector3 direction;
+    public Vector3 direction = Vector3.zero;
 
     // Start is called before the first frame update
     private void Move()
     {
-        // Rotate to correct direccion
-        transform.rotation = Quaternion.Slerp(transform.rotation,
-                  Quaternion.LookRotation(direction),
-                  rotationSpeed * Time.deltaTime);
+        if (direction != Vector3.zero)
+        {
+            // Rotate to correct direccion
+            transform.rotation = Quaternion.Slerp(transform.rotation,
+                      Quaternion.LookRotation(direction),
+                      rotationSpeed * Time.deltaTime);
+        }
 
         // Move
         transform.Translate(0.0f, 0.0f, Time.deltaTime * movementSpeed);
