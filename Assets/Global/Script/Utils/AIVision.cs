@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Camera))]
 public class AIVision : MonoBehaviour
 {
 	public LayerMask mask;
@@ -11,6 +12,16 @@ public class AIVision : MonoBehaviour
 	private void Start()
     {
         frustum = GetComponent<Camera>();
+
+        if (frustum)
+        {
+			frustum.clearFlags = CameraClearFlags.Nothing;
+			// TODO: have bug
+			frustum.cullingMask &= ~(1 << LayerMask.NameToLayer("Everything"));
+			frustum.cullingMask |= 1 << LayerMask.NameToLayer("Nothing");
+			frustum.allowHDR = false;
+			frustum.allowMSAA = false;
+		}
     }
 
     void Update()
