@@ -23,6 +23,7 @@ namespace BBUnity.Actions
         /// to the NavMeshAgent the destination a random position calculated with <see cref="getRandomPosition()"/> </remarks>
         public override void OnStart()
         {
+            Debug.Log("Move!");
             navAgent = gameObject.GetComponent<UnityEngine.AI.NavMeshAgent>();
             if (navAgent == null)
             {
