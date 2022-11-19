@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class CryForHelpState : StateMachineBehaviour
 {
@@ -16,6 +17,11 @@ public class CryForHelpState : StateMachineBehaviour
         {
             voice.enabled = true;
             voice.radius = 10.0f;
+        }
+
+        if(animator.TryGetComponent(out NavMeshAgent agent))
+        {
+            agent.isStopped = true;
         }
     }
 

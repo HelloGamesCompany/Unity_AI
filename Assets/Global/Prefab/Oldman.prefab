@@ -310,6 +310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   benchPos: {x: 0, y: 0, z: 0}
+  minimWanderTime: 8
 --- !u!120 &8667574930738194261
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -451,10 +452,10 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5901516036369999819}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 0
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5901516037172364391
 GameObject:

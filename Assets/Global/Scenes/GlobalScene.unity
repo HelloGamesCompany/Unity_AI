@@ -7540,14 +7540,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Oldman
       objectReference: {fileID: 0}
-    - target: {fileID: 6764670214866143804, guid: 39dac9377020e8943b777a8353eea3cc, type: 3}
-      propertyPath: m_Radius
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8335556838181735004, guid: 39dac9377020e8943b777a8353eea3cc, type: 3}
-      propertyPath: minimWanderTime
-      value: 8
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39dac9377020e8943b777a8353eea3cc, type: 3}
 --- !u!1 &7762354536690148945 stripped
