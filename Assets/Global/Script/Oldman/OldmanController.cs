@@ -40,7 +40,7 @@ public class OldmanController : MonoBehaviour
 
     public void Help()
     {
-        if (anim && anim.GetCurrentAnimatorStateInfo(0).IsName("SitState"))
+        if (anim)
         {
             anim.SetTrigger("Help");
         }

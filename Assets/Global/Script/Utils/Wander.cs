@@ -27,11 +27,6 @@ public class Wander : MonoBehaviour
 
         nextTarget = new Vector3(nextTarget.x, transform.position.y, nextTarget.y);
 
-        if (gameObject.name == "Oldman")
-        {
-            Debug.Log(nextTarget);
-        }
-
         agent.destination = nextTarget;
 
         return true;

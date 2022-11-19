@@ -14,6 +14,11 @@ public class StoleWallet : ConditionBase
 
     public override bool Check()
     {
+        if (stoleWallet)
+        {
+            Debug.Log("Reset Wallet");
+            ThiefTimer.startTime = 0.0f;
+        }
         return stoleWallet;
     }
 }

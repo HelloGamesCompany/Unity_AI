@@ -55,7 +55,6 @@ namespace BBUnity.Actions
                 return TaskStatus.FAILED;
             if (!navAgent.pathPending && navAgent.remainingDistance <= navAgent.stoppingDistance)
             {
-                Debug.Log("Complete MoveToGameObject!");
                 return TaskStatus.COMPLETED;
             }
             else if (navAgent.destination != targetTransform.position)

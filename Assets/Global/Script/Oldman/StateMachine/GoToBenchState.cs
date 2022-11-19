@@ -25,9 +25,6 @@ public class GoToBenchState : StateMachineBehaviour
 
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-
-        Debug.Log("DISTANCE: "+Vector3.Distance(agent.transform.position, benchPos));
-
         if (Vector3.Distance(agent.transform.position, benchPos) <= 1.5f)
         {
             animator.SetTrigger("SitDown");
