@@ -23,6 +23,15 @@ public class WanderState : StateMachineBehaviour
             controller.ResetWanderTime();
         }
 
+        // animation
+        if (animator.transform.GetChild(0).TryGetComponent(out Animator anim))
+        {
+            if (!anim.GetCurrentAnimatorStateInfo(0).IsName("OldMan_Move"))
+            {
+                anim.SetTrigger("Move");
+            }
+        }
+
         wanderScript = animator.GetComponent<Wander>();
 
         counter = updateFreq;

@@ -69,9 +69,9 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
-    crunchedCompression: 0
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -116,7 +116,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: runner_0
+      name: characters_0
       rect:
         serializedVersion: 2
         x: 0
@@ -130,14 +130,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7448b5dc75d4fd24a94a8a6fde6d1f33
-      internalID: 1421717091
+      spriteID: f631192e3c0ca5847b8728d45d337e6f
+      internalID: -1750946626
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runner_1
+      name: characters_1
       rect:
         serializedVersion: 2
         x: 38
@@ -151,14 +151,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8776d16d4d584554b8204424ec7ade9b
-      internalID: 168838309
+      spriteID: ea47536c286e1a14580e237558a87ba2
+      internalID: 2136383176
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runner_2
+      name: characters_2
       rect:
         serializedVersion: 2
         x: 76
@@ -172,14 +172,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8b6a3148b66f224a9268e996c21a7bf
-      internalID: -442157190
+      spriteID: 64135e733505c924987229416c0f1ab7
+      internalID: -2146974026
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runner_3
+      name: characters_3
       rect:
         serializedVersion: 2
         x: 114
@@ -193,14 +193,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e605da158da6bc40a00a208e6a26163
-      internalID: -376708066
+      spriteID: c1ebeb048200bfb47a78d01e8c01b5bd
+      internalID: -70793985
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runner_4
+      name: characters_4
       rect:
         serializedVersion: 2
         x: 152
@@ -214,14 +214,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7dc04bafdb5ff244bf344c4474e1ff6
-      internalID: -2032628243
+      spriteID: 67d367249ef7a8a408381d8ce9d36bda
+      internalID: 1117466417
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runner_5
+      name: characters_5
       rect:
         serializedVersion: 2
         x: 190
@@ -235,14 +235,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af4dfd391b9118d48bc556d6c4459e40
-      internalID: 1791597151
+      spriteID: 1dba3a9e7bd397540a3ed81defd2a0c7
+      internalID: 977315044
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runner_6
+      name: characters_6
       rect:
         serializedVersion: 2
         x: 228
@@ -256,14 +256,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b57bdd261d9a374bb61e92dd6576e1d
-      internalID: -2093726163
+      spriteID: 919430bf79629e041987b13afbc038ce
+      internalID: 2093337920
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runner_7
+      name: characters_7
       rect:
         serializedVersion: 2
         x: 266
@@ -277,14 +277,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 717e4d645998af44691d148135557d5f
-      internalID: -926795869
+      spriteID: 1a217ac878e61aa4ebd3013fa69f426f
+      internalID: -695032442
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runner_8
+      name: characters_8
       rect:
         serializedVersion: 2
         x: 0
@@ -298,14 +298,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a3981842e8769f44b0bc67a87b800d4
-      internalID: 1886613230
+      spriteID: 3b8cf873ecd27064aa8c502c6d3482d6
+      internalID: -481936715
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runner_9
+      name: characters_9
       rect:
         serializedVersion: 2
         x: 38
@@ -319,14 +319,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e506e6dc847e72f498a91073d05d469b
-      internalID: -1233887938
+      spriteID: 2b77aed13f4a68e4aabf32609ceaf5ff
+      internalID: 346693898
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runner_10
+      name: characters_10
       rect:
         serializedVersion: 2
         x: 76
@@ -340,14 +340,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 103ea442e4dfa444580136713913bf37
-      internalID: -444755735
+      spriteID: ffdcf54f4d233ea41b4399fd56b1c814
+      internalID: 1067048359
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runner_11
+      name: characters_11
       rect:
         serializedVersion: 2
         x: 114
@@ -361,14 +361,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 057a4f3893e043941868e176e105208f
-      internalID: 722880794
+      spriteID: 6fa553c1457ca9b4196c9c19a6c6d67f
+      internalID: -652602115
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runner_12
+      name: characters_12
       rect:
         serializedVersion: 2
         x: 152
@@ -382,14 +382,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11d1821eef656474284642ae543115d0
-      internalID: 1422566212
+      spriteID: 7f2b41ff79d81c9418e6108ed38fd2cb
+      internalID: -831061964
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runner_13
+      name: characters_13
       rect:
         serializedVersion: 2
         x: 190
@@ -403,14 +403,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0d8ea4bbc3717a41886ef4dd8c39b03
-      internalID: 599101167
+      spriteID: 220b1732531622f49a7bbedbbdbd36d3
+      internalID: 1348248249
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runner_14
+      name: characters_14
       rect:
         serializedVersion: 2
         x: 228
@@ -424,14 +424,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26779114101a57c47877b8d77b48a3e3
-      internalID: -1084344081
+      spriteID: 53bd87a4da711974abece77a19be6a84
+      internalID: 2079705551
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runner_15
+      name: characters_15
       rect:
         serializedVersion: 2
         x: 266
@@ -445,35 +445,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66e9c09c0d0805e4e8d51e4ea13ad1af
-      internalID: 1655046738
+      spriteID: 57e609a31901dc249aab2261aa92177d
+      internalID: 867294751
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runner_16
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 190
-        width: 38
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f2af8ee61c5411d43a796c31ae7d72b4
-      internalID: 1239908655
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: runner_17
+      name: characters_16
       rect:
         serializedVersion: 2
         x: 38
@@ -487,14 +466,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2dbb82bcdc99ab54f8cb5a35e6d08f8e
-      internalID: 885451210
+      spriteID: 85535ba2bf96bbe499c7bf8b241c7887
+      internalID: -1734713116
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runner_18
+      name: characters_17
       rect:
         serializedVersion: 2
         x: 76
@@ -508,14 +487,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9525f92ec86e40a409884c5f82b54e21
-      internalID: -598132215
+      spriteID: d067bb958ab0b6641b39a8f62003803e
+      internalID: -2087085682
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runner_19
+      name: characters_18
       rect:
         serializedVersion: 2
         x: 114
@@ -529,14 +508,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1baee1e8e2625704c9f3eb52be73489d
-      internalID: -1592728508
+      spriteID: 9db2fa4ddb8d60549b4c166f40714075
+      internalID: 1774071913
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runner_20
+      name: characters_19
       rect:
         serializedVersion: 2
         x: 152
@@ -550,14 +529,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 796400653bd2feb46aa65ea38f29aa00
-      internalID: -215900546
+      spriteID: a99f4122533dad9479de12d21fd67bca
+      internalID: -510938035
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runner_21
+      name: characters_20
       rect:
         serializedVersion: 2
         x: 190
@@ -571,18 +550,60 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbb48512f89f43b43912e67d8bec8d5e
-      internalID: 1262916636
+      spriteID: 6255a84cdeb9b2d418393ce0c78961b8
+      internalID: 280317330
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runner_22
+      name: characters_21
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 190
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c590fbd5329a1e42a18f4e24ccb5c5e
+      internalID: 1151535719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: characters_22
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 190
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f78e617eb2366d547bf0416b0ec33493
+      internalID: -185181085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: characters_23
       rect:
         serializedVersion: 2
         x: 0
-        y: 76
+        y: 152
         width: 38
         height: 38
       alignment: 0
@@ -592,18 +613,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8f0ea4269ef4d6428214e1cf62ed45f
-      internalID: -1330208878
+      spriteID: 099edc6dea2be6a438dd451bfeb530d5
+      internalID: -1023425202
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runner_23
+      name: characters_24
       rect:
         serializedVersion: 2
         x: 38
-        y: 76
+        y: 152
         width: 38
         height: 38
       alignment: 0
@@ -613,18 +634,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fdc0d257297db4c4fbfe110b6be32076
-      internalID: -1951313028
+      spriteID: 03aebeeac95216d40a431b7f5b209dee
+      internalID: -446566887
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runner_24
+      name: characters_25
       rect:
         serializedVersion: 2
         x: 76
-        y: 76
+        y: 152
         width: 38
         height: 38
       alignment: 0
@@ -634,18 +655,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e14db3174c739434d9d1ab1766a13cb6
-      internalID: 905903357
+      spriteID: cda15c50322232843a54a7f923e643fd
+      internalID: -1884865966
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runner_25
+      name: characters_26
       rect:
         serializedVersion: 2
         x: 114
-        y: 76
+        y: 152
         width: 38
         height: 38
       alignment: 0
@@ -655,18 +676,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99a6a0e905384a243aff15666660e6c1
-      internalID: 1346073324
+      spriteID: 5c76fe86437d815458c47db64e0b16e6
+      internalID: 711876416
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runner_26
+      name: characters_27
       rect:
         serializedVersion: 2
         x: 152
-        y: 76
+        y: 152
         width: 38
         height: 38
       alignment: 0
@@ -676,14 +697,77 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d43445334ffbbcf48b7a90a6f15edea5
-      internalID: -249453742
+      spriteID: c980fbc9ac7b49646a3e44970a7a14cf
+      internalID: 621977864
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runner_27
+      name: characters_28
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 152
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caea794260a0f04459ecfb7d3a8a2c0b
+      internalID: 2139908760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: characters_29
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 152
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c343524456cdb8e44bfd10129b518502
+      internalID: -759275564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: characters_30
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 152
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71280aab0374c6b41a447cfa28a1f563
+      internalID: -1914753692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: characters_31
       rect:
         serializedVersion: 2
         x: 0
@@ -697,14 +781,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7014e1c52bf081647ab0283353c3f004
-      internalID: 1439674879
+      spriteID: 0b3720d0002e3824da7988680a48f835
+      internalID: -1089394215
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runner_28
+      name: characters_32
       rect:
         serializedVersion: 2
         x: 38
@@ -718,14 +802,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95243949ea8715f49927f3c5455b428f
-      internalID: 1164689514
+      spriteID: 0c4c855a747337e4f9ea7e8bd0f504b7
+      internalID: 1727346681
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runner_29
+      name: characters_33
       rect:
         serializedVersion: 2
         x: 76
@@ -739,14 +823,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc281371b56712f44ab7585791e8ce24
-      internalID: 865258425
+      spriteID: 56045fe97bfe00d478a7c97e0281e714
+      internalID: 1356188773
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runner_30
+      name: characters_34
       rect:
         serializedVersion: 2
         x: 114
@@ -760,14 +844,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e56b4cb0ae17a8644aef16e2a9a66687
-      internalID: 729318690
+      spriteID: 2bc473da4d2ec7c46bff83f7d9b85160
+      internalID: 13174445
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: runner_31
+      name: characters_35
       rect:
         serializedVersion: 2
         x: 152
@@ -781,8 +865,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a92dcc00d26691c48be71d39ebfea88f
-      internalID: -1665297807
+      spriteID: 930f1bc7643e1684ba1c74a1b7517747
+      internalID: 395777159
       vertices: []
       indices: 
       edges: []
@@ -798,38 +882,42 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      runner_22: -1330208878
-      runner_23: -1951313028
-      runner_10: -444755735
-      runner_18: -598132215
-      runner_9: -1233887938
-      runner_16: 1239908655
-      runner_30: 729318690
-      runner_31: -1665297807
-      runner_29: 865258425
-      runner_8: 1886613230
-      runner_24: 905903357
-      runner_28: 1164689514
-      runner_7: -926795869
-      runner_2: -442157190
-      runner_0: 1421717091
-      runner_27: 1439674879
-      runner_25: 1346073324
-      runner_6: -2093726163
-      runner_11: 722880794
-      runner_5: 1791597151
-      runner_14: -1084344081
-      runner_17: 885451210
-      runner_1: 168838309
-      runner_3: -376708066
-      runner_15: 1655046738
-      runner_20: -215900546
-      runner_4: -2032628243
-      runner_13: 599101167
-      runner_19: -1592728508
-      runner_26: -249453742
-      runner_21: 1262916636
-      runner_12: 1422566212
+      characters_23: -1023425202
+      characters_18: 1774071913
+      characters_34: 13174445
+      characters_10: 1067048359
+      characters_2: -2146974026
+      characters_11: -652602115
+      characters_13: 1348248249
+      characters_25: -1884865966
+      characters_31: -1089394215
+      characters_7: -695032442
+      characters_3: -70793985
+      characters_1: 2136383176
+      characters_4: 1117466417
+      characters_28: 2139908760
+      characters_27: 621977864
+      characters_5: 977315044
+      characters_6: 2093337920
+      characters_21: 1151535719
+      characters_0: -1750946626
+      characters_8: -481936715
+      characters_24: -446566887
+      characters_30: -1914753692
+      characters_16: -1734713116
+      characters_17: -2087085682
+      characters_26: 711876416
+      characters_14: 2079705551
+      characters_9: 346693898
+      characters_35: 395777159
+      characters_22: -185181085
+      characters_15: 867294751
+      characters_29: -759275564
+      characters_32: 1727346681
+      characters_12: -831061964
+      characters_20: 280317330
+      characters_33: 1356188773
+      characters_19: -510938035
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

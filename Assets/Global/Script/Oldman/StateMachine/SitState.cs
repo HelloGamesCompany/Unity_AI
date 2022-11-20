@@ -19,6 +19,15 @@ public class SitState : StateMachineBehaviour
         {
             agent.isStopped = true;
         }
+
+        // animation
+        if (animator.transform.GetChild(0).TryGetComponent(out Animator anim))
+        {
+            if (!anim.GetCurrentAnimatorStateInfo(0).IsName("OldMan_Sit"))
+            {
+                anim.SetTrigger("Sit");
+            }
+        }
     }
 
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

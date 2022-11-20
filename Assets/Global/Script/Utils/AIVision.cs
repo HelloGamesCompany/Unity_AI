@@ -8,11 +8,21 @@ public class AIVision : MonoBehaviour
 
 	public string targetTag = "Untagged";
 
-	private Camera frustum;
+	private Camera frustum = null;
 
     private void Awake()
     {
         frustum = GetComponent<Camera>();
+        
+		if (frustum)
+        {
+			frustum.clearFlags = CameraClearFlags.Nothing;
+			frustum.cullingMask = 0;
+			frustum.nearClipPlane = 0.3f;
+			frustum.farClipPlane = 10.0f;
+			frustum.allowHDR = false;
+			frustum.allowMSAA = false;
+		}
     }
 
     void Update()

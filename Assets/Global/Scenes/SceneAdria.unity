@@ -1379,6 +1379,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Thief
       objectReference: {fileID: 0}
+    - target: {fileID: 476580584377206747, guid: 6db7e79968133db428cc0d380c60e472, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5113067776329809708, guid: 6db7e79968133db428cc0d380c60e472, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -4840,6 +4844,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1977261729044442505, guid: 39dac9377020e8943b777a8353eea3cc, type: 3}
+      propertyPath: far clip plane
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5901516036369999816, guid: 39dac9377020e8943b777a8353eea3cc, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -4887,6 +4895,10 @@ PrefabInstance:
     - target: {fileID: 5901516036369999819, guid: 39dac9377020e8943b777a8353eea3cc, type: 3}
       propertyPath: m_Name
       value: Oldman
+      objectReference: {fileID: 0}
+    - target: {fileID: 8335556838181735004, guid: 39dac9377020e8943b777a8353eea3cc, type: 3}
+      propertyPath: minimWanderTime
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1317562775, guid: 39dac9377020e8943b777a8353eea3cc, type: 3}

@@ -9,8 +9,7 @@ public class OldmanController : MonoBehaviour
     [HideInInspector]
     public Vector3 benchPos = new Vector3(0, 0, 0);
 
-    [SerializeField]
-    private float minimWanderTime = 5.0f;
+    private float minimWanderTime = 0;
 
     // Start is called before the first frame update
     void Start()

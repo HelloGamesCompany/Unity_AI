@@ -23,6 +23,15 @@ public class CryForHelpState : StateMachineBehaviour
         {
             agent.isStopped = true;
         }
+
+        // animation
+        if (animator.transform.GetChild(0).TryGetComponent(out Animator anim))
+        {
+            if (!anim.GetCurrentAnimatorStateInfo(0).IsName("OldMan_Help"))
+            {
+                anim.SetTrigger("Help");
+            }
+        }
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
