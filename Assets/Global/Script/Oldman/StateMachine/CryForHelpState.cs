@@ -32,6 +32,14 @@ public class CryForHelpState : StateMachineBehaviour
                 anim.SetTrigger("Help");
             }
         }
+
+        // Emotions
+        EmotionController emController = animator.GetComponentInChildren<EmotionController>();
+
+        if (emController)
+        {
+            emController.ChangeSprite(1);
+        }
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -40,6 +48,13 @@ public class CryForHelpState : StateMachineBehaviour
         {
             voice.enabled = false;
             voice.radius = 0.5f;
+        }
+
+        EmotionController emController = animator.GetComponentInChildren<EmotionController>();
+
+        if (emController)
+        {
+            emController.ChangeSprite(-1);
         }
     }
 }

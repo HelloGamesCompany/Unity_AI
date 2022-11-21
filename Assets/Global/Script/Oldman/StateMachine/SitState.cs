@@ -28,6 +28,14 @@ public class SitState : StateMachineBehaviour
                 anim.SetTrigger("Sit");
             }
         }
+
+        // Emotions
+        EmotionController emController = animator.GetComponentInChildren<EmotionController>();
+
+        if (emController)
+        {
+            emController.ChangeSprite(0);
+        }
     }
 
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -37,6 +45,16 @@ public class SitState : StateMachineBehaviour
         if (sitTime <= 0)
         {
             animator.SetTrigger("Wander");
+        }
+    }
+
+    public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        EmotionController emController = animator.GetComponentInChildren<EmotionController>();
+
+        if (emController)
+        {
+            emController.ChangeSprite(-1);
         }
     }
 }
