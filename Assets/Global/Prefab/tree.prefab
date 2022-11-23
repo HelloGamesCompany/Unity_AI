@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 733290684300617550}
   - component: {fileID: 7574653420301212385}
   - component: {fileID: 2074672300046243956}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b39815b8223aea41a31dace7f3643e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beeManager: {fileID: 0}
 --- !u!65 &2074672300046243956
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71,7 +72,7 @@ GameObject:
   - component: {fileID: 733290684421517117}
   - component: {fileID: 733290684421517119}
   - component: {fileID: 733290684421517118}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TreeShadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +171,7 @@ GameObject:
   - component: {fileID: 733290685278684388}
   - component: {fileID: 733290685278684387}
   - component: {fileID: 733290685278684386}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TreeSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,7 +268,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6403025616634738589}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: shadowLocator
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -301,7 +302,7 @@ GameObject:
   - component: {fileID: 5650514854740761746}
   - component: {fileID: 7749585112676907508}
   - component: {fileID: 5654333275448197110}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: NavMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}

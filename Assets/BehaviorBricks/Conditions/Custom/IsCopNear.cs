@@ -24,6 +24,7 @@ public class IsCopNear : ConditionBase
     public override bool Check()
     {
         Debug.Log("Check 2");
+        Debug.Log(oldMan);
         return Vector3.Distance(cop.transform.position, oldMan.transform.position) < distance;
     }
 }

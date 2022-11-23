@@ -15,7 +15,7 @@ namespace BBUnity.Actions
         ///<value>Input target game object towards this game object will be moved Parameter.</value>
         [InParam("target")]
         [Help("Target game object towards this game object will be moved")]
-        public OldmanController target = null;
+        public GameObject target = null;
 
         public override bool Check()
         {
@@ -25,7 +25,7 @@ namespace BBUnity.Actions
             {
                 if (target)
                 {
-                    target.Help(); // The Oldman noticed 
+                    target.GetComponent<OldmanController>().Help(); // The Oldman noticed 
                     return true;
                 }
             }
