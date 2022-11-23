@@ -64,7 +64,7 @@ namespace BBUnity.Conditions
             RaycastHit hit;
             Ray ray = new Ray();
             ray.direction = dir;
-            ray.origin = gameObject.transform.position;
+            ray.origin = gameObject.transform.position + new Vector3(0, 0.1f, 0);
 
             if (Physics.Raycast(ray, out hit, float.PositiveInfinity, 1 << 7, QueryTriggerInteraction.Collide))
             {
