@@ -5,6 +5,7 @@ public class OldmanController : MonoBehaviour
 {
     //private Wander wander;
     private Animator anim;
+    public bool callingForHelp = false;
 
     [HideInInspector]
     public Vector3 benchPos = new Vector3(0, 0, 0);
@@ -42,9 +43,18 @@ public class OldmanController : MonoBehaviour
         if (anim)
         {
             anim.SetTrigger("Help");
+            callingForHelp = true;
         }
     }
 
+    public void StopHelp()
+    {
+        if (anim)
+        {
+            callingForHelp = false;
+            Wander();
+        }
+    }
     public void Wander()
     {
         if (anim && 

@@ -64,8 +64,7 @@ public class Flee : GOAction
         if (!navAgent.pathPending && navAgent.remainingDistance <= navAgent.stoppingDistance)
         {
             fleeObjective.GetComponent<ThiefCarBehaviour>().Run();
-            oldman.GetComponent<OldmanController>().Wander();
-            // Set Cop to wander state again
+            oldman.GetComponent<OldmanController>().StopHelp();
 
             // Reset my variables
             navAgent.speed = 1.5f;
