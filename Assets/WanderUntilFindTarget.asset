@@ -48,10 +48,10 @@ MonoBehaviour:
     />\r\n          <entry name=\"valueB\" type=\"System.Boolean\" isBlackboard=\"True\"
     blackboard=\"foundTarget\" />\r\n        </inputValues>\r\n      </inputParams>\r\n     
     <outputParams />\r\n      <localParams />\r\n    </ConditionNode>\r\n    <ConditionEvalNode
-    id=\"16\" policy=\"WAIT_UNTIL_TRUE_AND_COMPLETE\" name=\"My Conditions/IsTargetWithTagInSight\">\r\n     
+    id=\"16\" policy=\"WAIT_UNTIL_FALSE_AND_FAIL\" name=\"My Conditions/IsTargetWithTagInSight\">\r\n     
     <inputParams>\r\n        <inputValues>\r\n          <entry name=\"tag\" type=\"System.String\"
     isBlackboard=\"True\" blackboard=\"tag\" />\r\n          <entry name=\"angle\"
-    type=\"System.Single\" isBlackboard=\"False\" value=\"120\" />\r\n          <entry
+    type=\"System.Single\" isBlackboard=\"False\" value=\"360\" />\r\n          <entry
     name=\"closeDistance\" type=\"System.Single\" isBlackboard=\"False\" value=\"15\"
     />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams>\r\n       
     <outputValues>\r\n          <entry name=\"target\" type=\"UnityEngine.GameObject\"
@@ -62,7 +62,7 @@ MonoBehaviour:
     />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams>\r\n       
     <outputValues>\r\n          <entry name=\"var\" type=\"System.Boolean\" isBlackboard=\"True\"
     blackboard=\"foundTarget\" />\r\n        </outputValues>\r\n      </outputParams>\r\n     
-    <localParams />\r\n    </ActionNode>\r\n    <ConditionEvalNode id=\"12\" policy=\"WAIT_UNTIL_TRUE_AND_COMPLETE\"
+    <localParams />\r\n    </ActionNode>\r\n    <ConditionEvalNode id=\"12\" policy=\"WAIT_UNTIL_FALSE_AND_FAIL\"
     name=\"Basic/CheckBool\">\r\n      <inputParams>\r\n        <inputValues>\r\n         
     <entry name=\"valueA\" type=\"System.Boolean\" isBlackboard=\"False\" value=\"False\"
     />\r\n          <entry name=\"valueB\" type=\"System.Boolean\" isBlackboard=\"True\"
@@ -100,17 +100,17 @@ MonoBehaviour:
     <BehaviorTree id=\"0\" />\r\n          <SequenceNode id=\"4\" />\r\n         
     <RepeatUntilSuccess id=\"1\" />\r\n        </data>\r\n      </_data>\r\n    </SequenceNode>\r\n   
     <PrioritySelectorNode id=\"2\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"True\" position=\"188.5627 437.9807\" name=\"Priority Selector\" description=\"\"
-    cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
-    <PrioritySelectorNode id=\"2\" />\r\n          <SequenceNode id=\"4\" />\r\n       
-    </data>\r\n      </_data>\r\n    </PrioritySelectorNode>\r\n    <ConditionNode
-    id=\"3\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    selected=\"False\" position=\"188.5627 437.9807\" name=\"Priority Selector\"
+    description=\"\" cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <PrioritySelectorNode id=\"2\" />\r\n          <SequenceNode
+    id=\"4\" />\r\n        </data>\r\n      </_data>\r\n    </PrioritySelectorNode>\r\n   
+    <ConditionNode id=\"3\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
     position=\"494.8117 435.3021\" name=\"Basic/CheckBool\" description=\"Checks
     whether two booleans have the same value\" cardinality=\"0\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <ConditionNode id=\"3\" />\r\n         
     <SequenceNode id=\"4\" />\r\n        </data>\r\n      </_data>\r\n    </ConditionNode>\r\n   
     <ConditionEvalNode id=\"16\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"216.546 988.7816\" name=\"My Conditions/IsTargetWithTagInSight\"
+    selected=\"True\" position=\"216.546 988.7816\" name=\"My Conditions/IsTargetWithTagInSight\"
     description=\"Eval\" cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree
     id=\"0\" />\r\n          <ConditionEvalNode id=\"16\" />\r\n          <PrioritySelectorNode
     id=\"2\" />\r\n        </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n   
