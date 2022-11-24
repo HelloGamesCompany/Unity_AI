@@ -15,7 +15,7 @@ MonoBehaviour:
   brickName: Assets/WanderUntilFindTarget.asset
   xml: "\uFEFF<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<BehaviorBricks xmlns:ref=\"urn:padaone\"
     version=\"1.0\">\r\n  <BehaviorTree id=\"0\" />\r\n  <runtimeInfo>\r\n    <BehaviorTree
-    id=\"0\" guid=\"df0c6d2db3324044d88b7bddc2157bc0\" nextId=\"24\">\r\n      <root>\r\n       
+    id=\"0\" guid=\"df0c6d2db3324044d88b7bddc2157bc0\" nextId=\"25\">\r\n      <root>\r\n       
     <PrioritySelectorNode id=\"17\" />\r\n      </root>\r\n      <inputParams>\r\n       
     <inputValues>\r\n          <entry name=\"tag\" type=\"System.String\" isBlackboard=\"False\"
     />\r\n          <entry name=\"angle\" type=\"System.Single\" isBlackboard=\"False\"
@@ -25,7 +25,8 @@ MonoBehaviour:
     <outputParams />\r\n      <localParams>\r\n        <localValues>\r\n         
     <entry name=\"foundTarget\" type=\"System.Boolean\" isBlackboard=\"False\" value=\"False\"
     />\r\n          <entry name=\"target\" type=\"UnityEngine.GameObject\" isBlackboard=\"False\"
-    />\r\n        </localValues>\r\n      </localParams>\r\n    </BehaviorTree>\r\n   
+    />\r\n          <entry name=\"valueB\" type=\"System.Boolean\" isBlackboard=\"False\"
+    value=\"False\" />\r\n        </localValues>\r\n      </localParams>\r\n    </BehaviorTree>\r\n   
     <PrioritySelectorNode id=\"17\">\r\n      <children>\r\n        <elem>\r\n         
     <GuardAndNode>\r\n            <guard>\r\n              <ConditionEvalNode id=\"22\"
     />\r\n            </guard>\r\n            <child>\r\n              <ActionNode
@@ -65,7 +66,7 @@ MonoBehaviour:
     />\r\n          <entry name=\"valueB\" type=\"System.Boolean\" isBlackboard=\"True\"
     blackboard=\"foundTarget\" />\r\n        </inputValues>\r\n      </inputParams>\r\n     
     <outputParams />\r\n      <localParams />\r\n    </ConditionNode>\r\n    <ConditionEvalNode
-    id=\"16\" policy=\"WAIT_UNTIL_FALSE_AND_FAIL\" name=\"My Conditions/IsTargetWithTagInSight\">\r\n     
+    id=\"16\" policy=\"WAIT_UNTIL_TRUE_AND_COMPLETE\" name=\"My Conditions/IsTargetWithTagInSight\">\r\n     
     <inputParams>\r\n        <inputValues>\r\n          <entry name=\"tag\" type=\"System.String\"
     isBlackboard=\"True\" blackboard=\"tag\" />\r\n          <entry name=\"angle\"
     type=\"System.Single\" isBlackboard=\"False\" value=\"120\" />\r\n          <entry
@@ -113,60 +114,60 @@ MonoBehaviour:
     />\r\n          <ConditionEvalNode id=\"22\" />\r\n          <RepeatUntilSuccess
     id=\"1\" />\r\n        </nodes>\r\n      </_nodes>\r\n    </BehaviorTree>\r\n   
     <PrioritySelectorNode id=\"17\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"46.18075 149.1704\" name=\"Priority Selector\"
+    selected=\"False\" position=\"232.8477 225.8369\" name=\"Priority Selector\"
     description=\"\" cardinality=\"1\" hasParent=\"False\">\r\n          <BehaviorTree
     id=\"0\" />\r\n          <PrioritySelectorNode id=\"17\" />\r\n        </data>\r\n     
     </_data>\r\n    </PrioritySelectorNode>\r\n    <ConditionEvalNode id=\"22\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"29.50924
-    446.4535\" name=\"Basic/CheckBool\" description=\"Eval\" cardinality=\"1\" hasParent=\"True\">\r\n         
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"216.1759
+    523.1203\" name=\"Basic/CheckBool\" description=\"Eval\" cardinality=\"1\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <ConditionEvalNode id=\"22\" />\r\n         
     <PrioritySelectorNode id=\"17\" />\r\n        </data>\r\n      </_data>\r\n   
     </ConditionEvalNode>\r\n    <ActionNode id=\"21\">\r\n      <_data>\r\n       
-    <data breakpoint=\"0\" selected=\"False\" position=\"-49.47058 298.9006\" name=\"SuccessAction\"
+    <data breakpoint=\"0\" selected=\"False\" position=\"137.1958 375.5669\" name=\"SuccessAction\"
     description=\"Action that always successes. It executes in one cycle.\" cardinality=\"0\"
     hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ActionNode
     id=\"21\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
     <ConditionEvalNode id=\"20\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"396.9208 550.8225\" name=\"AlwaysTrue\" description=\"Eval\"
+    selected=\"False\" position=\"583.5869 627.4896\" name=\"AlwaysTrue\" description=\"Eval\"
     cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
     <ConditionEvalNode id=\"20\" />\r\n          <PrioritySelectorNode id=\"17\"
     />\r\n        </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n    <RepeatUntilSuccess
     id=\"1\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"179.0063 298.1551\" name=\"Repeat Until Success\" description=\"Repeats
+    position=\"365.6734 374.8214\" name=\"Repeat Until Success\" description=\"Repeats
     the execution of its child node until it success\" cardinality=\"1\" hasParent=\"False\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <RepeatUntilSuccess id=\"1\" />\r\n       
     </data>\r\n      </_data>\r\n    </RepeatUntilSuccess>\r\n    <SequenceNode id=\"4\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"310.9226
-    470.1357\" name=\"Sequence\" description=\"Executes all its children in sequence
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"497.5885
+    546.8029\" name=\"Sequence\" description=\"Executes all its children in sequence
     until all of them are successful\" cardinality=\"-1\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <SequenceNode id=\"4\" />\r\n         
     <RepeatUntilSuccess id=\"1\" />\r\n        </data>\r\n      </_data>\r\n    </SequenceNode>\r\n   
     <PrioritySelectorNode id=\"2\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"250.9223 633.4685\" name=\"Priority Selector\"
+    selected=\"False\" position=\"437.5893 710.1356\" name=\"Priority Selector\"
     description=\"\" cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree
     id=\"0\" />\r\n          <PrioritySelectorNode id=\"2\" />\r\n          <SequenceNode
     id=\"4\" />\r\n        </data>\r\n      </_data>\r\n    </PrioritySelectorNode>\r\n   
     <ConditionNode id=\"3\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"557.1725 630.7899\" name=\"Basic/CheckBool\" description=\"Checks
-    whether two booleans have the same value\" cardinality=\"0\" hasParent=\"True\">\r\n         
+    position=\"743.8385 707.457\" name=\"Basic/CheckBool\" description=\"Checks whether
+    two booleans have the same value\" cardinality=\"0\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <ConditionNode id=\"3\" />\r\n         
     <SequenceNode id=\"4\" />\r\n        </data>\r\n      </_data>\r\n    </ConditionNode>\r\n   
     <ConditionEvalNode id=\"16\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"True\" position=\"327.2401 1182.604\" name=\"My Conditions/IsTargetWithTagInSight\"
+    selected=\"False\" position=\"465.5725 1260.936\" name=\"My Conditions/IsTargetWithTagInSight\"
     description=\"Eval\" cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree
     id=\"0\" />\r\n          <ConditionEvalNode id=\"16\" />\r\n          <PrioritySelectorNode
     id=\"2\" />\r\n        </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n   
     <ActionNode id=\"15\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"92.79559 827.0513\" name=\"Basic/SetBool\" description=\"Sets a value
+    position=\"231.1294 905.3854\" name=\"Basic/SetBool\" description=\"Sets a value
     to a boolean variable\" cardinality=\"0\" hasParent=\"False\">\r\n          <BehaviorTree
     id=\"0\" />\r\n          <ActionNode id=\"15\" />\r\n        </data>\r\n     
     </_data>\r\n    </ActionNode>\r\n    <ConditionEvalNode id=\"12\">\r\n      <_data>\r\n       
-    <data breakpoint=\"0\" selected=\"False\" position=\"874.6841 1208.939\" name=\"Basic/CheckBool\"
+    <data breakpoint=\"0\" selected=\"False\" position=\"1061.353 1285.605\" name=\"Basic/CheckBool\"
     description=\"Eval\" cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree
     id=\"0\" />\r\n          <ConditionEvalNode id=\"12\" />\r\n          <PrioritySelectorNode
     id=\"2\" />\r\n        </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n   
     <ActionNode id=\"11\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"472.4622 833.3854\" name=\"Navigation/MoveToRandomPosition\" description=\"Gets
+    position=\"659.1283 910.0529\" name=\"Navigation/MoveToRandomPosition\" description=\"Gets
     a random position from a given area and moves the game object to that point by
     using a NavMeshAgent\" cardinality=\"0\" hasParent=\"False\">\r\n          <BehaviorTree
     id=\"0\" />\r\n          <ActionNode id=\"11\" />\r\n        </data>\r\n     

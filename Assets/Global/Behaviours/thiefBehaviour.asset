@@ -95,32 +95,32 @@ MonoBehaviour:
     <RepeatDecorator id=\"27\" />\r\n          <SubbehaviorNode id=\"50\" />\r\n         
     <SequenceNode id=\"55\" />\r\n        </nodes>\r\n      </_nodes>\r\n    </BehaviorTree>\r\n   
     <RepeatDecorator id=\"34\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"424.065 293.4915\" name=\"Repeat\" description=\"Repeats
+    selected=\"False\" position=\"554.0652 306.8248\" name=\"Repeat\" description=\"Repeats
     the execution of its child node\" cardinality=\"1\" hasParent=\"False\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <RepeatDecorator id=\"34\" />\r\n       
     </data>\r\n      </_data>\r\n    </RepeatDecorator>\r\n    <SequenceNode id=\"55\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"393.0117
-    433.3567\" name=\"Sequence\" description=\"Executes all its children in sequence
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"523.0115
+    446.69\" name=\"Sequence\" description=\"Executes all its children in sequence
     until all of them are successful\" cardinality=\"-1\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <SequenceNode id=\"55\" />\r\n         
     <RepeatDecorator id=\"34\" />\r\n        </data>\r\n      </_data>\r\n    </SequenceNode>\r\n   
     <SubbehaviorNode id=\"50\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"-140.0935 576.8688\" name=\"WanderUntilFindTarget\"
+    selected=\"False\" position=\"-3.426846 591.8684\" name=\"WanderUntilFindTarget\"
     description=\"\" cardinality=\"-1\" hasParent=\"True\">\r\n          <BehaviorTree
     id=\"0\" />\r\n          <SelectorNode id=\"54\" />\r\n          <SequenceNode
     id=\"55\" />\r\n        </data>\r\n      </_data>\r\n    </SubbehaviorNode>\r\n   
     <SubbehaviorNode id=\"25\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"True\" position=\"172.8795 577.8564\" name=\"ToSteal\" description=\"\"
+    selected=\"True\" position=\"322.8793 591.1895\" name=\"ToSteal\" description=\"\"
     cardinality=\"-1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
     <SubbehaviorNode id=\"25\" />\r\n          <SequenceNode id=\"55\" />\r\n       
     </data>\r\n      </_data>\r\n    </SubbehaviorNode>\r\n    <RepeatDecorator id=\"27\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"416.4227
-    563.3536\" name=\"Repeat\" description=\"Repeats the execution of its child node\"
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"546.4228
+    576.6869\" name=\"Repeat\" description=\"Repeats the execution of its child node\"
     cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
     <RepeatDecorator id=\"27\" />\r\n          <SequenceNode id=\"55\" />\r\n       
     </data>\r\n      </_data>\r\n    </RepeatDecorator>\r\n    <ActionNode id=\"30\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"427.672
-    698.3547\" name=\"MyActions/Flee\" description=\"Get the GameObject to flee from.\"
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"557.6722
+    711.6879\" name=\"MyActions/Flee\" description=\"Get the GameObject to flee from.\"
     cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
     <ActionNode id=\"30\" />\r\n          <RepeatDecorator id=\"27\" />\r\n       
     </data>\r\n      </_data>\r\n    </ActionNode>\r\n  </editorInfo>\r\n  <runtimeInfo>\r\n   
