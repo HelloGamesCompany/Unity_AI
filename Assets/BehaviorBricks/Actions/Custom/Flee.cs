@@ -15,6 +15,14 @@ public class Flee : GOAction
     [Help("game object that must have a BoxCollider or SphereColider, which will determine the area from which the position is extracted")]
     public GameObject oldman;
 
+    [OutParam("foundTarget")]
+    [Help("game object that must have a BoxCollider or SphereColider, which will determine the area from which the position is extracted")]
+    public bool foundTarget;
+
+    [OutParam("stoleWallet")]
+    [Help("game object that must have a BoxCollider or SphereColider, which will determine the area from which the position is extracted")]
+    public bool stoleWallet;
+
     private UnityEngine.AI.NavMeshAgent navAgent;
 
     private Transform fleeTransfrom;
@@ -54,7 +62,19 @@ public class Flee : GOAction
         if (fleeObjective == null)
             return TaskStatus.FAILED;
         if (!navAgent.pathPending && navAgent.remainingDistance <= navAgent.stoppingDistance)
+        {
+            fleeObjective.GetComponent<ThiefCarBehaviour>().Run();
+            oldman.GetComponent<OldmanController>().Wander();
+            // Set Cop to wander state again
+
+            // Reset my variables
+            navAgent.speed = 1.5f;
+            foundTarget = false;
+            stoleWallet = false;
+
+            gameObject.SetActive(false);
             return TaskStatus.COMPLETED;
+        }
         return TaskStatus.RUNNING;
     }
 }
