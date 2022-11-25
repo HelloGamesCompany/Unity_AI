@@ -37,6 +37,7 @@ public class Flee : GOAction
         if (oldman.TryGetComponent(out OldmanController controller))
         {
             controller.Help();
+            gameObject.GetComponentInChildren<EmotionController>().ChangeSprite(0, 5.0f);
         }
         else
         {
@@ -91,6 +92,7 @@ public class Flee : GOAction
             stoleWallet = false;
 
             gameObject.SetActive(false);
+            gameObject.GetComponentInChildren<EmotionController>().ChangeSprite(-1);
             return TaskStatus.COMPLETED;
         }
         return TaskStatus.RUNNING;

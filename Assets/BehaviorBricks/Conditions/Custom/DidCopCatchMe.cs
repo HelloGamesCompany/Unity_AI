@@ -44,6 +44,8 @@ namespace BBUnity.Conditions
 
                 gameObject.SetActive(false);
 
+                cop.GetComponentInChildren<EmotionController>().ChangeSprite(0, 5.0f);
+
                 GameObject.Find("ThiefManager").GetComponent<ThiefManager>().RespawnThief();
                 return true;
             }

@@ -27,7 +27,8 @@ public class AIVision : MonoBehaviour
 
     void Update()
 	{
-        if (frustum)
+#if !UNITY_EDITOR
+		if (frustum)
         {
 			Collider[] colliders = Physics.OverlapSphere(transform.position, frustum.farClipPlane, mask);
 			Plane[] planes = GeometryUtility.CalculateFrustumPlanes(frustum);
@@ -55,5 +56,6 @@ public class AIVision : MonoBehaviour
 				}
 			}
 		}		
+#endif
 	}
 }

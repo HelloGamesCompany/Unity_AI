@@ -38,7 +38,6 @@ namespace BBUnity.Conditions
             }
             navAgent.speed = 1.5f;
             return false;
-
         }
     }
 }

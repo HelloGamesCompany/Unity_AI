@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 380170804778588027}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: shadowLocator
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 6320684929667305435}
   - component: {fileID: 6320684929667305433}
   - component: {fileID: 6320684929667305432}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: OldCopShadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 236408007037852779}
   - component: {fileID: 8220174771226781877}
   - component: {fileID: 8220174771226781885}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: OldCop
   m_TagString: Oldman
   m_Icon: {fileID: 0}
@@ -181,7 +181,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.2
-  m_Speed: 3.5
+  m_Speed: 1.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -272,7 +272,7 @@ LineRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6320684929787578283}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -371,7 +371,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6320684929787578283}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6440d331712eb664ba2330848891c8c3, type: 3}
   m_Name: 
@@ -474,7 +474,7 @@ GameObject:
   - component: {fileID: 6320684930553848837}
   - component: {fileID: 6320684930553848836}
   - component: {fileID: 6988203707047160138}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: OldCopSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -589,6 +589,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6320684929787578280}
     m_Modifications:
+    - target: {fileID: 1617871256297644773, guid: 9bc5195238f28a042b7d2552992835ef, type: 3}
+      propertyPath: sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 1414945040, guid: 8cf0dfbd1ed8ff643b47f006f3d9d7b8, type: 3}
+    - target: {fileID: 4755781361268162418, guid: 9bc5195238f28a042b7d2552992835ef, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755781361268162418, guid: 9bc5195238f28a042b7d2552992835ef, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4755781361268162419, guid: 9bc5195238f28a042b7d2552992835ef, type: 3}
       propertyPath: m_RootOrder
       value: 2

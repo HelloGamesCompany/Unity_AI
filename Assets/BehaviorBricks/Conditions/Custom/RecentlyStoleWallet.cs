@@ -11,16 +11,13 @@ public class RecentlyStoleWallet : ConditionBase
     {
         if (ThiefTimer.startTime == 0.0f)
         {
-            Debug.Log("Reset time");
             ThiefTimer.startTime = Time.time;
             return true;
         }
-        float timeDifference = Time.time - ThiefTimer.startTime
-;
+        float timeDifference = Time.time - ThiefTimer.startTime;
 
         if (timeDifference > 5.0f)
         {
-            Debug.Log("false");
             return false;
         }
         return true;

@@ -206,7 +206,7 @@ MonoBehaviour:
     description=\"Repeats the execution of its child node\" cardinality=\"1\" hasParent=\"False\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <RepeatDecorator id=\"34\" />\r\n       
     </data>\r\n      </_data>\r\n    </RepeatDecorator>\r\n  </editorInfo>\r\n</BehaviorBricks>"
-  zoom: 0.6
+  zoom: 0.7
   subslist:
   - {fileID: 11400000, guid: 8adfddffa70852a45ba1b64354494e3c, type: 2}
   - {fileID: 11400000, guid: 95e60fd9e9b06f74ea3ccf577033dcd4, type: 2}
