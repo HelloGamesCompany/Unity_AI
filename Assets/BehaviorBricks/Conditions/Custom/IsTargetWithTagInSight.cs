@@ -35,7 +35,6 @@ namespace BBUnity.Conditions
         /// <returns>True if the angle of forward vector with the  raycast direction is lower than the given angle.</returns>
         public override bool Check()
         {
-            Debug.Log("Check target in sight");
             // Get every game object with teh given tag
             GameObject[] targets = GameObject.FindGameObjectsWithTag(tag);
             if (targets.Length == 0)

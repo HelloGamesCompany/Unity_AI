@@ -33,7 +33,6 @@ public class Flee : GOAction
     public override void OnStart()
     {
         catched = false;
-        Debug.Log("Start fleeing!");
 
         if (oldman.TryGetComponent(out OldmanController controller))
         {

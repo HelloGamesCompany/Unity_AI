@@ -16,7 +16,6 @@ public class StoleWallet : ConditionBase
     {
         if (stoleWallet)
         {
-            Debug.Log("Reset Wallet");
             ThiefTimer.startTime = 0.0f;
         }
         return stoleWallet;
