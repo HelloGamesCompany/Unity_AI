@@ -47,7 +47,7 @@ public class Flee : GOAction
 
             gameObject.SetActive(false);
             catched = true;
-
+            oldman = null;
             GameObject.Find("ThiefManager").GetComponent<ThiefManager>().RespawnThief();
             return;
         }

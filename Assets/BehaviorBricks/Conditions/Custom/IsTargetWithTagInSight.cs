@@ -59,22 +59,8 @@ namespace BBUnity.Conditions
             if (dir.sqrMagnitude > closeDistance * closeDistance)
                 return false;
 
-            // Check if the closest target is within sight
-            RaycastHit hit;
-            Ray ray = new Ray();
-            ray.direction = dir;
-            ray.origin = gameObject.transform.position + new Vector3(0, 0.1f, 0);
-
-            if (Physics.Raycast(ray, out hit, float.PositiveInfinity, 1 << 7, QueryTriggerInteraction.Collide))
-            {
-                if (hit.collider.gameObject == closestTarget && Vector3.Angle(dir, gameObject.transform.forward) < angle * 0.5f)
-                {
-                    tagTarget = closestTarget;
-                    return true;
-                }
-            }
-
-            return false;
+            tagTarget = closestTarget;
+            return true;
         }
     }
 }
