@@ -27,7 +27,7 @@ namespace BBUnity.Conditions
 
             foreach (var oldMan in oldMans)
             {
-                if(oldMan.GetComponent<OldmanController>().callingForHelp)
+                if(oldMan.TryGetComponent(out OldmanController controller) && controller.callingForHelp)
                 {
                     if (Vector3.Distance(gameObject.transform.position, oldMan.transform.position) <= detectionDistance)
                     {

@@ -26,13 +26,32 @@ public class Flee : GOAction
     private UnityEngine.AI.NavMeshAgent navAgent;
 
     private Transform fleeTransfrom;
+    private bool catched = false;
 
     /// <summary>Initialization Method of MoveToGameObject.</summary>
     /// <remarks>Check if GameObject object exists and NavMeshAgent, if there is no NavMeshAgent, the default one is added.</remarks>
     public override void OnStart()
     {
+        catched = false;
         Debug.Log("Start fleeing!");
-        oldman.GetComponent<OldmanController>().Help();
+
+        if (oldman.TryGetComponent(out OldmanController controller))
+        {
+            controller.Help();
+        }
+        else
+        {
+            oldman.GetComponent<OldcopController>().CatchThief();
+            foundTarget = false;
+            stoleWallet = false;
+
+            gameObject.SetActive(false);
+            catched = true;
+
+            GameObject.Find("ThiefManager").GetComponent<ThiefManager>().RespawnThief();
+            return;
+        }
+
         if (fleeObjective == null)
         {
             Debug.LogError("The movement target of this game object is null", gameObject);
@@ -59,6 +78,7 @@ public class Flee : GOAction
 
     public override TaskStatus OnUpdate()
     {
+        if (catched) return TaskStatus.COMPLETED;
         if (fleeObjective == null)
             return TaskStatus.FAILED;
         if (!navAgent.pathPending && navAgent.remainingDistance <= navAgent.stoppingDistance)

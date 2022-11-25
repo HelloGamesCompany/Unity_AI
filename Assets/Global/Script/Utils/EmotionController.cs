@@ -16,7 +16,8 @@ public class EmotionController : MonoBehaviour
 
     public void ChangeSprite(int index)
     {
-        if(index>=0 && index < sprites.Count)
+        CancelInvoke();
+        if (index>=0 && index < sprites.Count)
         {
             spRenderer.sprite = sprites[index];
         }
@@ -24,5 +25,23 @@ public class EmotionController : MonoBehaviour
         {
             spRenderer.sprite = null;
         }
+    }
+
+    public void ChangeSprite(int index, float time)
+    {
+        if (index >= 0 && index < sprites.Count)
+        {
+            Invoke("SetSpriteNull", time);
+            spRenderer.sprite = sprites[index];
+        }
+        else
+        {
+            spRenderer.sprite = null;
+        }
+    }
+
+    private void SetSpriteNull()
+    {
+        spRenderer.sprite = null;
     }
 }
