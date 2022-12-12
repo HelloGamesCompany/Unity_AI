@@ -9,6 +9,7 @@ TagManager:
   - Bee
   - Bench
   - Oldman
+  - Obstacle
   layers:
   - Default
   - TransparentFX
