@@ -78,11 +78,6 @@ public class ChildAgent : Agent
         sensor.AddObservation(rBody.velocity.x);
         sensor.AddObservation(rBody.velocity.z);
 
-        // Agent obstacles
-        foreach (var item in obstacles)
-        {
-            sensor.AddObservation(item.position);
-        }
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)
@@ -92,12 +87,12 @@ public class ChildAgent : Agent
         continuousActionsOut[1] = Input.GetAxis("Vertical");
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Obstacle"))
         {
             // Debug.Log("faild");
-            SetReward(-0.25f);
+            AddReward(-0.05f);
             // EndEpisode();
         }
     }

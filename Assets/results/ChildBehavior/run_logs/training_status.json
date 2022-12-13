@@ -2,46 +2,28 @@
     "ChildBehavior": {
         "checkpoints": [
             {
-                "steps": 13312,
-                "file_path": "results\\ChildBehavior\\ChildBehavior\\ChildBehavior-13312.onnx",
-                "reward": -1.5357142857142858,
-                "creation_time": 1670885130.1197686,
+                "steps": 82739,
+                "file_path": "results\\ChildBehavior\\ChildBehavior\\ChildBehavior-82739.onnx",
+                "reward": -1.750000238418579,
+                "creation_time": 1670922002.688483,
                 "auxillary_file_paths": [
-                    "results\\ChildBehavior\\ChildBehavior\\ChildBehavior-13312.pt"
-                ]
-            },
-            {
-                "steps": 13936,
-                "file_path": "results\\ChildBehavior\\ChildBehavior\\ChildBehavior-13936.onnx",
-                "reward": -2.0,
-                "creation_time": 1670885215.4420698,
-                "auxillary_file_paths": [
-                    "results\\ChildBehavior\\ChildBehavior\\ChildBehavior-13936.pt"
-                ]
-            },
-            {
-                "steps": 16014,
-                "file_path": "results\\ChildBehavior\\ChildBehavior\\ChildBehavior-16014.onnx",
-                "reward": -1.75,
-                "creation_time": 1670885736.621723,
-                "auxillary_file_paths": [
-                    "results\\ChildBehavior\\ChildBehavior\\ChildBehavior-16014.pt"
+                    "results\\ChildBehavior\\ChildBehavior\\ChildBehavior-82739.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 16014,
+            "steps": 82739,
             "file_path": "results\\ChildBehavior\\ChildBehavior.onnx",
-            "reward": -1.75,
-            "creation_time": 1670885736.621723,
+            "reward": -1.750000238418579,
+            "creation_time": 1670922002.688483,
             "auxillary_file_paths": [
-                "results\\ChildBehavior\\ChildBehavior\\ChildBehavior-16014.pt"
+                "results\\ChildBehavior\\ChildBehavior\\ChildBehavior-82739.pt"
             ]
         }
     },
     "metadata": {
         "stats_format_version": "0.3.0",
-        "mlagents_version": "0.29.0",
-        "torch_version": "1.7.1+cu110"
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.10.2+cpu"
     }
 }
