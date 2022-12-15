@@ -21,6 +21,12 @@ public class ChildAgent : Agent
         Debug.Log("obstacles parameters: " + obstacles.Count * 3);
     }
 
+    private void Update()
+    {
+        transform.rotation = Quaternion.identity;
+        //transform.position = rBody.transform.position;
+    }
+
     public Transform Target;
     public override void OnEpisodeBegin()
     {
@@ -29,7 +35,7 @@ public class ChildAgent : Agent
         {
             rBody.angularVelocity = Vector3.zero;
             rBody.velocity = Vector3.zero;
-            transform.localPosition = new Vector3(0, 1.5f, 0);
+            rBody.transform.localPosition = new Vector3(0, 1.5f, 0);
         }
 
         // Move the target to a new spot
@@ -46,6 +52,8 @@ public class ChildAgent : Agent
         controlSignal.x = actionBuffers.ContinuousActions[0];
         controlSignal.z = actionBuffers.ContinuousActions[1];
         rBody.AddForce(controlSignal * forceMultiplier);
+
+        //transform.Translate(controlSignal * forceMultiplier);
 
         Debug.Log("velocity: " + controlSignal);
 
