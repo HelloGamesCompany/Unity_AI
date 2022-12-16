@@ -2,49 +2,22 @@
     "ChildBehavior": {
         "checkpoints": [
             {
-                "steps": 768,
-                "file_path": "results\\ChildBehavior\\ChildBehavior\\ChildBehavior-768.onnx",
-                "reward": null,
-                "creation_time": 1671125053.054942,
+                "steps": 218332,
+                "file_path": "results\\ChildBehavior\\ChildBehavior\\ChildBehavior-218332.onnx",
+                "reward": 1.0,
+                "creation_time": 1671145808.9560819,
                 "auxillary_file_paths": [
-                    "results\\ChildBehavior\\ChildBehavior\\ChildBehavior-768.pt"
-                ]
-            },
-            {
-                "steps": 1422,
-                "file_path": "results\\ChildBehavior\\ChildBehavior\\ChildBehavior-1422.onnx",
-                "reward": null,
-                "creation_time": 1671125173.9416358,
-                "auxillary_file_paths": [
-                    "results\\ChildBehavior\\ChildBehavior\\ChildBehavior-1422.pt"
-                ]
-            },
-            {
-                "steps": 4037,
-                "file_path": "results\\ChildBehavior\\ChildBehavior\\ChildBehavior-4037.onnx",
-                "reward": null,
-                "creation_time": 1671125404.220843,
-                "auxillary_file_paths": [
-                    "results\\ChildBehavior\\ChildBehavior\\ChildBehavior-4037.pt"
-                ]
-            },
-            {
-                "steps": 32679,
-                "file_path": "results\\ChildBehavior\\ChildBehavior\\ChildBehavior-32679.onnx",
-                "reward": null,
-                "creation_time": 1671140380.766588,
-                "auxillary_file_paths": [
-                    "results\\ChildBehavior\\ChildBehavior\\ChildBehavior-32679.pt"
+                    "results\\ChildBehavior\\ChildBehavior\\ChildBehavior-218332.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 32679,
+            "steps": 218332,
             "file_path": "results\\ChildBehavior\\ChildBehavior.onnx",
-            "reward": null,
-            "creation_time": 1671140380.766588,
+            "reward": 1.0,
+            "creation_time": 1671145808.9560819,
             "auxillary_file_paths": [
-                "results\\ChildBehavior\\ChildBehavior\\ChildBehavior-32679.pt"
+                "results\\ChildBehavior\\ChildBehavior\\ChildBehavior-218332.pt"
             ]
         }
     },

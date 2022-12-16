@@ -8,10 +8,12 @@ public class ChildAgent : Agent
 {
     private List<Transform> obstacles = new List<Transform>();
 
-    Rigidbody rBody;
+    bool dead = false;
+
+    //Rigidbody rBody;
     void Start()
     {
-        rBody = GetComponent<Rigidbody>();
+        //rBody = GetComponent<Rigidbody>();
 
         foreach (var g in GameObject.FindGameObjectsWithTag("Obstacle"))
         {
@@ -23,20 +25,26 @@ public class ChildAgent : Agent
 
     private void Update()
     {
-        transform.rotation = Quaternion.identity;
-        //transform.position = rBody.transform.position;
+        // transform.rotation = Quaternion.identity;
+        // transform.position = rBody.transform.position;
     }
 
     public Transform Target;
     public override void OnEpisodeBegin()
     {
-        // If the Agent fell, zero its momentum
-        if (transform.position.y < 0)
+        if (dead)
         {
-            rBody.angularVelocity = Vector3.zero;
-            rBody.velocity = Vector3.zero;
-            rBody.transform.localPosition = new Vector3(0, 1.5f, 0);
+            transform.localPosition = new Vector3(0, 1.5f, 0);
+            dead = false;
         }
+
+        // If the Agent fell, zero its momentum
+        //if (transform.position.y < 1.0f)
+        //{
+        //    //rBody.angularVelocity = Vector3.zero;
+        //    //rBody.velocity = Vector3.zero;
+        //    transform.localPosition = new Vector3(0, 1.5f, 0);
+        //}
 
         // Move the target to a new spot
         Target.localPosition = new Vector3(Random.value * 20 - 10,
@@ -51,11 +59,13 @@ public class ChildAgent : Agent
         Vector3 controlSignal = Vector3.zero;
         controlSignal.x = actionBuffers.ContinuousActions[0];
         controlSignal.z = actionBuffers.ContinuousActions[1];
-        rBody.AddForce(controlSignal * forceMultiplier);
+        //rBody.AddForce(controlSignal * forceMultiplier);
 
         //transform.Translate(controlSignal * forceMultiplier);
 
-        Debug.Log("velocity: " + controlSignal);
+        transform.position += controlSignal * Time.deltaTime * forceMultiplier;
+
+        //Debug.Log("velocity: " + controlSignal);
 
         // Rewards
         float distanceToTarget = Vector3.Distance(transform.localPosition, Target.localPosition);
@@ -83,9 +93,8 @@ public class ChildAgent : Agent
         sensor.AddObservation(transform.localPosition);
 
         // Agent velocity
-        sensor.AddObservation(rBody.velocity.x);
-        sensor.AddObservation(rBody.velocity.z);
-
+        //sensor.AddObservation(rBody.velocity.x);
+        //sensor.AddObservation(rBody.velocity.z);
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)
@@ -93,6 +102,18 @@ public class ChildAgent : Agent
         var continuousActionsOut = actionsOut.ContinuousActions;
         continuousActionsOut[0] = Input.GetAxis("Horizontal");
         continuousActionsOut[1] = Input.GetAxis("Vertical");
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("COL");
+        if (other.CompareTag("Border"))
+        {
+            Debug.Log("COL with border");
+            dead = true;
+            SetReward(-1.0f);
+            EndEpisode();
+        }
     }
 
     private void OnTriggerStay(Collider other)
