@@ -121,7 +121,7 @@ public class ChildAgent : Agent
         if (other.CompareTag("Obstacle"))
         {
             // Debug.Log("faild");
-            AddReward(-0.005f);
+            AddReward(-0.02f);
             // EndEpisode();
         }
     }
