@@ -10,6 +10,8 @@ public class ChildAgent : Agent
 
     bool dead = false;
 
+    float distance = 0;
+
     //Rigidbody rBody;
     void Start()
     {
@@ -21,12 +23,21 @@ public class ChildAgent : Agent
         }
 
         Debug.Log("obstacles parameters: " + obstacles.Count * 3);
+
+        InvokeRepeating(nameof(CheckDistance), 0, 1.0f);
     }
 
-    private void Update()
+    void CheckDistance()
     {
-        // transform.rotation = Quaternion.identity;
-        // transform.position = rBody.transform.position;
+        float newDistance = Vector3.Distance(transform.position, Target.transform.position);
+
+        if (newDistance < distance)
+        {
+            Debug.Log("Reward for distance" + distance);
+            AddReward(0.02f * (1 / distance));
+        }
+
+        distance = newDistance;
     }
 
     public Transform Target;
@@ -71,9 +82,8 @@ public class ChildAgent : Agent
         float distanceToTarget = Vector3.Distance(transform.localPosition, Target.localPosition);
 
         // Reached target
-        if (distanceToTarget < 1.42f)
+        if (distanceToTarget < 1.4f)
         {
-            // Debug.Log("Get reward");
             SetReward(1.0f);
             EndEpisode();
         }
@@ -106,7 +116,6 @@ public class ChildAgent : Agent
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("COL");
         if (other.CompareTag("Border"))
         {
             Debug.Log("COL with border");
@@ -114,15 +123,19 @@ public class ChildAgent : Agent
             SetReward(-1.0f);
             EndEpisode();
         }
+        else if (other.CompareTag("Obstacle"))
+        {
+            //Debug.Log("Chock with obstacle");
+            AddReward(-0.1f);
+        }
     }
 
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Obstacle"))
         {
-            // Debug.Log("faild");
-            AddReward(-0.02f);
-            // EndEpisode();
+            //Debug.Log("Stay chock with obstacle");
+            AddReward(-0.0005f);
         }
     }
 }
