@@ -154,7 +154,7 @@ MonoBehaviour:
     cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
     <ConditionEvalNode id=\"59\" />\r\n          <PrioritySelectorNode id=\"58\"
     />\r\n        </data>\r\n      </_data>\r\n    </ConditionEvalNode>\r\n    <ActionNode
-    id=\"30\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"True\"
+    id=\"30\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
     position=\"694.7562 717.2441\" name=\"MyActions/Flee\" description=\"Get the
     GameObject to flee from.\" cardinality=\"0\" hasParent=\"False\">\r\n         
     <BehaviorTree id=\"30\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n 

@@ -102,9 +102,10 @@ public class ChildAgent : Agent
         sensor.AddObservation(Target.localPosition);
         sensor.AddObservation(transform.localPosition);
 
-        // Agent velocity
-        //sensor.AddObservation(rBody.velocity.x);
-        //sensor.AddObservation(rBody.velocity.z);
+        for (int i = 0; i < obstacles.Count; ++i)
+        {
+            sensor.AddObservation(obstacles[i].position);
+        }
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)

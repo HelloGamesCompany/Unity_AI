@@ -17,7 +17,7 @@ public class TaichiHead : MonoBehaviour
     //private List<TaichiFollower> _followers = new();
 
     [SerializeField]
-    private int waitingCounter = 30;
+    private int waitingCounter = 15;
 
     private TargetManager targetManager;
 
@@ -54,7 +54,7 @@ public class TaichiHead : MonoBehaviour
         else if (Vector3.Distance(transform.position, target.transform.position) < radius)
         {
             target = targetManager.GetRandomRoad();
-            waitingCounter = 30;
+            waitingCounter = 15;
             agent.speed = 0;
         }
     }

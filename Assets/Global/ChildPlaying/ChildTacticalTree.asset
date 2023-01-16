@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34a7c8ca992f915438a96c2077353778, type: 3}
+  m_Name: ChildTacticalTree
+  m_EditorClassIdentifier: 
+  brickName: Assets/Global/ChildPlaying/ChildTacticalTree.asset
+  xml: "\uFEFF<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<BehaviorBricks xmlns:ref=\"urn:padaone\"
+    version=\"1.0\">\r\n  <BehaviorTree id=\"0\" />\r\n  <runtimeInfo>\r\n    <BehaviorTree
+    id=\"0\" guid=\"7d41cbe6f14748540b2dcb3940f6dccb\" nextId=\"8\">\r\n      <root>\r\n       
+    <RepeatDecorator id=\"1\" />\r\n      </root>\r\n      <inputParams>\r\n       
+    <inputValues>\r\n          <entry name=\"ChildrenManager\" type=\"ChildrenManager\"
+    isBlackboard=\"False\" />\r\n          <entry name=\"Area\" type=\"UnityEngine.GameObject\"
+    isBlackboard=\"False\" />\r\n          <entry name=\"foundChild\" type=\"System.Boolean\"
+    isBlackboard=\"False\" value=\"False\" />\r\n        </inputValues>\r\n     
+    </inputParams>\r\n      <outputParams />\r\n      <localParams />\r\n    </BehaviorTree>\r\n   
+    <RepeatDecorator id=\"1\" loops=\"-1\" policy=\"ContinueWhenChildFails\">\r\n     
+    <child>\r\n        <SequenceNode id=\"2\" />\r\n      </child>\r\n      <inputParams
+    />\r\n      <outputParams />\r\n      <localParams />\r\n    </RepeatDecorator>\r\n   
+    <SequenceNode id=\"2\">\r\n      <children>\r\n        <elem>\r\n          <SubbehaviorNode
+    id=\"6\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"5\"
+    />\r\n        </elem>\r\n        <elem>\r\n          <SubbehaviorNode id=\"4\"
+    />\r\n        </elem>\r\n        <elem>\r\n          <SubbehaviorNode id=\"7\"
+    />\r\n        </elem>\r\n      </children>\r\n      <inputParams />\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </SequenceNode>\r\n    <SubbehaviorNode
+    id=\"6\">\r\n      <_guid>ee2d2d3e4cda9af4ba97b6533dab8f66</_guid>\r\n      <inputParams>\r\n       
+    <inputValues>\r\n          <entry name=\"ChildrenManager\" type=\"ChildrenManager\"
+    isBlackboard=\"True\" blackboard=\"ChildrenManager\" />\r\n        </inputValues>\r\n     
+    </inputParams>\r\n      <outputParams />\r\n      <localParams />\r\n    </SubbehaviorNode>\r\n   
+    <ActionNode id=\"5\" action=\"Children/ChooseCatcher\">\r\n      <inputParams>\r\n       
+    <inputValues>\r\n          <entry name=\"ChildrenManager\" type=\"ChildrenManager\"
+    isBlackboard=\"True\" blackboard=\"ChildrenManager\" />\r\n        </inputValues>\r\n     
+    </inputParams>\r\n      <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n   
+    <SubbehaviorNode id=\"4\">\r\n      <_guid>431e4062c0e56c745a366c8beb69abc3</_guid>\r\n     
+    <inputParams>\r\n        <inputValues>\r\n          <entry name=\"ChildrenManager\"
+    type=\"ChildrenManager\" isBlackboard=\"True\" blackboard=\"ChildrenManager\"
+    />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams />\r\n     
+    <localParams />\r\n    </SubbehaviorNode>\r\n    <SubbehaviorNode id=\"7\">\r\n     
+    <_guid>6c050e4495cd95f418323e0a220ac50f</_guid>\r\n      <inputParams>\r\n       
+    <inputValues>\r\n          <entry name=\"foundChild\" type=\"System.Boolean\"
+    isBlackboard=\"True\" blackboard=\"foundChild\" />\r\n          <entry name=\"ChildrenManager\"
+    type=\"ChildrenManager\" isBlackboard=\"True\" blackboard=\"ChildrenManager\"
+    />\r\n          <entry name=\"Area\" type=\"UnityEngine.GameObject\" isBlackboard=\"True\"
+    blackboard=\"Area\" />\r\n        </inputValues>\r\n      </inputParams>\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </SubbehaviorNode>\r\n  </runtimeInfo>\r\n 
+    <editorInfo>\r\n    <BehaviorTree id=\"0\" _name=\"ChildTacticalTree\" _description=\"\"
+    _removeIfClosed=\"False\">\r\n      <_rootList>\r\n        <elem>\r\n         
+    <RepeatDecorator id=\"1\" />\r\n        </elem>\r\n        <elem>\r\n         
+    <SequenceNode id=\"2\" />\r\n        </elem>\r\n        <elem>\r\n          <SubbehaviorNode
+    id=\"4\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"5\"
+    />\r\n        </elem>\r\n        <elem>\r\n          <SubbehaviorNode id=\"6\"
+    />\r\n        </elem>\r\n        <elem>\r\n          <SubbehaviorNode id=\"7\"
+    />\r\n        </elem>\r\n      </_rootList>\r\n      <_nodes>\r\n        <nodes>\r\n         
+    <RepeatDecorator id=\"1\" />\r\n          <SequenceNode id=\"2\" />\r\n         
+    <SubbehaviorNode id=\"4\" />\r\n          <ActionNode id=\"5\" />\r\n         
+    <SubbehaviorNode id=\"6\" />\r\n          <SubbehaviorNode id=\"7\" />\r\n       
+    </nodes>\r\n      </_nodes>\r\n    </BehaviorTree>\r\n    <RepeatDecorator id=\"1\">\r\n     
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"571.25
+    -6.25\" name=\"Repeat\" description=\"Repeats the execution of its child node\"
+    cardinality=\"1\" hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n         
+    <RepeatDecorator id=\"1\" />\r\n        </data>\r\n      </_data>\r\n    </RepeatDecorator>\r\n   
+    <SequenceNode id=\"2\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"557.5 117.5\" name=\"Sequence\" description=\"Executes all its children
+    in sequence until all of them are successful\" cardinality=\"-1\" hasParent=\"True\">\r\n         
+    <BehaviorTree id=\"0\" />\r\n          <SequenceNode id=\"2\" />\r\n         
+    <RepeatDecorator id=\"1\" />\r\n        </data>\r\n      </_data>\r\n    </SequenceNode>\r\n   
+    <SubbehaviorNode id=\"6\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
+    selected=\"False\" position=\"166.25 272.5\" name=\"GatherOnCenter\" description=\"\"
+    cardinality=\"-1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
+    <SubbehaviorNode id=\"6\" />\r\n          <SequenceNode id=\"2\" />\r\n       
+    </data>\r\n      </_data>\r\n    </SubbehaviorNode>\r\n    <ActionNode id=\"5\">\r\n     
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"391.25
+    277.5\" name=\"Children/ChooseCatcher\" description=\"\" cardinality=\"0\" hasParent=\"True\">\r\n         
+    <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"5\" />\r\n          <SequenceNode
+    id=\"2\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
+    <SubbehaviorNode id=\"4\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
+    selected=\"False\" position=\"622.5 278.75\" name=\"ChildrenHide\" description=\"\"
+    cardinality=\"-1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
+    <SubbehaviorNode id=\"4\" />\r\n          <SequenceNode id=\"2\" />\r\n       
+    </data>\r\n      </_data>\r\n    </SubbehaviorNode>\r\n    <SubbehaviorNode id=\"7\">\r\n     
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"825 280\"
+    name=\"SearchUntilCatch\" description=\"\" cardinality=\"-1\" hasParent=\"True\">\r\n         
+    <BehaviorTree id=\"0\" />\r\n          <SubbehaviorNode id=\"7\" />\r\n         
+    <SequenceNode id=\"2\" />\r\n        </data>\r\n      </_data>\r\n    </SubbehaviorNode>\r\n 
+    </editorInfo>\r\n</BehaviorBricks>"
+  zoom: 0.8
+  subslist:
+  - {fileID: 11400000, guid: ee2d2d3e4cda9af4ba97b6533dab8f66, type: 2}
+  - {fileID: 11400000, guid: 431e4062c0e56c745a366c8beb69abc3, type: 2}
+  - {fileID: 11400000, guid: 6c050e4495cd95f418323e0a220ac50f, type: 2}
+  _guid: 7d41cbe6f14748540b2dcb3940f6dccb
