@@ -33,7 +33,7 @@ public class ChildAgent : Agent
 
         if (newDistance < distance)
         {
-            Debug.Log("Reward for distance" + distance);
+            //Debug.Log("Reward for distance" + distance);
             AddReward(0.02f * (1 / distance));
         }
 

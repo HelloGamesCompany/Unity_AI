@@ -1,7 +1,8 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class RunnerBehaviour : MonoBehaviour
+public class TaichiHead : MonoBehaviour
 {
     public float speed = 1.0f;
 
@@ -13,6 +14,13 @@ public class RunnerBehaviour : MonoBehaviour
     [HideInInspector]
     public NavMeshAgent agent;
 
+    //private List<TaichiFollower> _followers = new();
+
+    [SerializeField]
+    private int waitingCounter = 30;
+
+    private TargetManager targetManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +28,7 @@ public class RunnerBehaviour : MonoBehaviour
 
         agent.speed = speed;
 
-        TargetManager targetManager = FindObjectOfType<TargetManager>();
+        targetManager = FindObjectOfType<TargetManager>();
 
         target = targetManager.GetNearestRoad(transform.position);
 
@@ -35,9 +43,19 @@ public class RunnerBehaviour : MonoBehaviour
 
         if (target.CompareTag("BeeKeeper")) return;
 
-        if (Vector3.Distance(transform.position, target.transform.position) < radius)
+        if(agent.speed == 0)
         {
-            target = target.GetComponent<Target>().GetNextTarget(target);
+            if(waitingCounter-- <= 0)
+            {
+                agent.speed = speed;
+            }
+        }
+
+        else if (Vector3.Distance(transform.position, target.transform.position) < radius)
+        {
+            target = targetManager.GetRandomRoad();
+            waitingCounter = 30;
+            agent.speed = 0;
         }
     }
 }

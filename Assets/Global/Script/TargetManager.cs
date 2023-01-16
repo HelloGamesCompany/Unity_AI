@@ -64,4 +64,9 @@ public class TargetManager : MonoBehaviour
         }
         return closestRoad;
     }
+
+    public Target GetRandomRoad()
+    {
+        return roadTargets[Random.Range(0, roadTargets.Length - 1)];
+    }
 }
